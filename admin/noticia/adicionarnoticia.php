@@ -9,7 +9,7 @@
     <style>
         .container{
             width: 70vh;
-            height: 70vh;
+            height: 55vh;
             flex: auto;
             display: flex;
             flex-direction: column;
@@ -17,6 +17,8 @@
             justify-items: column-reverse;
             
         }
+
+      
     </style>
 </head>
 <body>
@@ -34,7 +36,7 @@
                 <label for="categoria">Categoria</label>
                 <input type="text" class="form-control" id="categoria" name="categoria" placeholder="Categoria">
             </div>
-            <button type="submit" class="btn btn-success">Enviar</button>    
+            <button type="submit" class="btn btn-success">Próximo</button>    
             <a href="noticia.php" class="btn btn-secondary">Voltar</a>
                 
         </form>

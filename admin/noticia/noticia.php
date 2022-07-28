@@ -10,7 +10,7 @@
                 width: 150px;
                 height: 40px;
                 place-self: center;     
-                alignt-text: center;
+                align-text: center;
             }
 
             .criar:hover{
@@ -19,6 +19,8 @@
                 text-decoration: none;
                 color: white;
             }
+            
+            
         </style>
         <?php include '../../includes/config.php';
          ?>

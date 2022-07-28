@@ -11,7 +11,7 @@
 </head>
 
 <body style="background-color:#DAA520 ;">
-
+  <div class="aaa"></div>
     <?php require_once(ROOT_PATH . '/navbar.php'); ?> 
 
     <!-- incluir public_functions -->

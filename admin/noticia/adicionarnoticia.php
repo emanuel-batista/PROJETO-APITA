@@ -38,7 +38,7 @@
             </div>
             <div class="form-group">
                 <label for="fileToUpload">Select image to upload:</label>
-                <input type="file" name="imagem" id="fileToUpload">
+                <input type="file" name="fileToUpload" id="fileToUpload">
             </div>
             <button type="submit" class="btn btn-success" name="enviar">Próximo</button>    
             <a href="noticia.php" class="btn btn-secondary">Voltar</a>

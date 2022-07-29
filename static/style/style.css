@@ -76,6 +76,11 @@
   object-fit: contain;
 }
 
+.carouselExampleDark {
+  flex-basis: auto;
+  flex-flow: row nowrap;
+}
+
 
 /* body {
     font-family: "Poppins", sans-serif;

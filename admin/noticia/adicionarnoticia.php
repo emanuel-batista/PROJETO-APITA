@@ -23,7 +23,7 @@
 </head>
 <body>
     <div class='container'>
-        <form action="criarnoticia.php" method="post">
+        <form action="criarnoticia.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="titulo">Título</label>
                 <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título">
@@ -36,7 +36,11 @@
                 <label for="categoria">Categoria</label>
                 <input type="text" class="form-control" id="categoria" name="categoria" placeholder="Categoria">
             </div>
-            <button type="submit" class="btn btn-success">Próximo</button>    
+            <div class="form-group">
+                <label for="fileToUpload">Select image to upload:</label>
+                <input type="file" name="imagem" id="fileToUpload">
+            </div>
+            <button type="submit" class="btn btn-success" name="enviar">Próximo</button>    
             <a href="noticia.php" class="btn btn-secondary">Voltar</a>
                 
         </form>

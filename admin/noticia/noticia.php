@@ -10,7 +10,7 @@
                 width: 150px;
                 height: 40px;
                 place-self: center;     
-                align-text: center;
+                text-align: center;
             }
 
             .criar:hover{

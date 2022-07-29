@@ -10,36 +10,47 @@
     <?php
     //incluir config
     include '../../includes/config.php';
+    //Deus ajuda
+        $target_dir = "../../static/images/";
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
+
+
+    //ajudou
 
     $titulo = $_POST['titulo'];
     $conteudo = $_POST['conteudo'];
     $categoria = $_POST['categoria'];
-    $img = 'imagem.png';
+    $img = $_POST['fileToUpload'];
     $publicado = true;
     $idusuario = '1';
+
+    echo $img;
         
     //não deixar inserir variavel nula
     if(empty($titulo) || empty($conteudo) || empty($categoria)){
         echo '<script>alert("Preencha todos os campos!");</script>';
         echo '<script>window.location.href = "../noticia/noticia.php";</script>';
-    }else{
+    }elseif (isset($_POST['enviar'])) {
+        # code...
+    
+        
+        // Check if image file is a actual image or fake image
+        if(isset($_POST["submit"])) {
+            $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
+        if($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
+        }
         //inserir no banco de dados
         $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, publicado_noticia, id_usuario) VALUES ('$titulo', '$conteudo', '$categoria', '$img', '$publicado', '$idusuario')";
         $result = mysqli_query($conn, $sql);
         ?>
-
-        //form de inserção de imagem
-        <form action="imgnoticia.php" method="post" enctype="multipart/form-data">
-            <div class="form-group">
-                <label for="titulo">ID</label>
-                <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título" readonly>
-            </div>    
-            <div class="form-group">
-                <label for="img">Imagem</label>
-                <input type="file" class="form-control-file" id="img" name="img">
-            </div>
-            <button type="submit" class="btn btn-success">Enviar</button>
-            <a href="imgnoticia.php" class="btn btn-secondary">Voltar</a>
 
         <?php
          if($result){

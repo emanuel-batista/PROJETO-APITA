@@ -67,7 +67,12 @@
     margin-left: 10px;
 }
 
-#carousel{
+.imgpageinicial{
+  max-width: 100%;
+  height: auto;
+}
+
+/* #carousel{
 
   padding-top: 20vh;
   width: 100vw;
@@ -79,7 +84,7 @@
 .carouselExampleDark {
   flex-basis: auto;
   flex-flow: row nowrap;
-}
+} */
 
 
 /* body {

@@ -111,9 +111,10 @@
                         echo "<td>".$row['categoria_noticia']."</td>";
                         echo "<td>
                         <a class='btn btn-sm btn-primary' href='editarnoticia.php?id=". $row["id_noticia"] . "&nome=". $row['titulo_noticia']."'/> <i class='far fa-edit'></i> Editar</a>
+                        
 
                     </td>
-                    <td><a class='btn btn-sm btn-info' href='#'><i class='fas fa-info-circle'></i> Details</a> </td>
+                    <td><a class='btn btn-sm btn-info' href='vernoticia.php?id=". $row["id_noticia"] ."&nome=".$row["titulo_noticia"]."'/><i class='fas fa-info-circle'></i>Ver mais</a> </td>
                     </tr>";
                     }
                 ?>

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Criar Notícia</title>
     <style>
@@ -38,7 +39,7 @@
             </div>
             <div class="form-group">
                 <label for="fileToUpload">Select image to upload:</label>
-                <input type="file" name="imagem" id="fileToUpload">
+                <input type="file" name="fileToUpload" id="fileToUpload">
             </div>
             <button type="submit" class="btn btn-success" name="enviar">Próximo</button>    
             <a href="noticia.php" class="btn btn-secondary">Voltar</a>

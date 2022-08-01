@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inserir Imagem</title>
+    <title>Notícia inserida</title>
 </head>
 <body>
     <?php
     //incluir config
     include '../../includes/config.php';
     //Deus ajuda
-        $target_dir = "../../static/images";
+        $target_dir = "../../static/images/imagens-noticia/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
         $uploadOk = 0;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
-        move_uploaded_file($_FILES["fileToUpload"]["name"], $target_file);
+        /* move_uploaded_file($_FILES["fileToUpload"]["name"], $target_file); */
 
 
     //ajudou
@@ -27,7 +27,6 @@
     // $img = $_POST['fileToUpload'];
     $publicado = true;
     $idusuario = '1';
-
    
         
     //não deixar inserir variavel nula
@@ -36,10 +35,10 @@
         echo '<script>window.location.href = "../noticia/noticia.php";</script>';
     }elseif (isset($_POST['enviar'])) {        
         // Check if image file is a actual image or fake image
-        if(isset($_POST["submit"])) {
+        if(isset($_POST["enviar"])) {
             $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
             if($check !== false) {
-                echo "File is an image - " . $check["mime"] . ".";
+                echo "<script>header('Location: ../noticia/noticia.php');</script>";
                 $uploadOk = 1;
             } else {
                 echo "File is not an image.";
@@ -52,7 +51,7 @@
         // if everything is ok, try to upload file
         } else {
             if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+            echo "<script>header('Location: ../noticia/noticia.php');</script>";
             } else {
             echo "Sorry, there was an error uploading your file.";
             }
@@ -67,7 +66,7 @@
         <?php
          if($result){
             echo '<script>alert("Notícia inserida com sucesso!");</script>';
-            echo "<script>header('Location: ../noticia/imgnoticia.php');</script>";
+            echo "<script>header('Location: noticia.php');</script>";
         }else{
             echo '<script>alert("Erro ao inserir notícia!");</script>';
             echo '<script>window.location.href = "../noticia/noticia.php";</script>';

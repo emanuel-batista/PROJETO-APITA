@@ -4,6 +4,8 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <?php include '../../includes/config.php';
+         ?>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!-- incluir dashboard_functions -->
         <title>AP!TA - O melhor PORTAL</title>
@@ -12,7 +14,7 @@
     <body>
         <div class="aaa" style="height: 100%;/* flex: auto; */display: flex;flex-direction: row;">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; height: 100vh;" id="sidebar-admin">
-                <a href="/" class="justify-items-center">
+                <a href="../../public/index" class="justify-items-center">
                 <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
                 <img src="../../static/images/apita.svg" alt="logo" class="img-fluid" width="50px" height="50px">
                 </a>
@@ -36,18 +38,6 @@
                         Usuários
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                        Products
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                        Customers
-                        </a>
-                    </li>
                 </ul>
                 <hr>
                 <div class="dropdown">
@@ -63,19 +53,41 @@
                 </div>
             </div>
             <!-- form de inserção de post  -->
-            <div class="lado-direito-admin" style="width: 100vh; padding: 5vh;">
-                <form action="criarentrevista.php" method="post">
-                    <div class="form-group">
-                        <label for="titulo">Título</label>
-                        <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título">
-                    </div>
-                    <div class="form-group">
-                        <label for="conteudo">Link - não escreva muito</label>
-                        <textarea class="form-control" id="conteudo" name="conteudo" rows="1"></textarea>
-                    </div>
-                    <button type="submit">Enviar</button>
+            <div class="card" style="width: 170vh;">
+            <!-- <button id="dd__new__list" type="button" class="btn btn-success position-absolute" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-plus"></i> Add a new List</button> -->
+            <a href="adicionarnoticia.php" class='btn btn-success criar font-weight-bold'>Linkar Entrevista</a>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Título</th>
+                    <th scope="col">Link</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Ver mais</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                    //$id = $row['id'];
+                    $sql = "SELECT id_entrevista, titulo_entrevista, link_entrevista FROM entrevista";
+                    $result = mysqli_query($conn, $sql);
                     
-                </form>
+                    while($row = mysqli_fetch_assoc($result)){
+                        echo "<tr>";
+                        echo "<td name='id'>".$row['id_entrevista']."</td>";
+                        echo "<td>".$row['titulo_entrevista']."</td>";
+                        echo "<td>".$row['link_entrevista']."</td>";
+                        echo "<td>
+                        <a class='btn btn-sm btn-primary' href='editarnoticia.php?id=". $row["id_entrevista"] . "&nome=". $row['titulo_entrevista']."'/> <i class='far fa-edit'></i> Editar</a>
+                        
+
+                    </td>
+                    <td><a class='btn btn-sm btn-info' href='vernoticia.php?id=". $row["id_entrevista"] ."&nome=".$row["titulo_entrevista"]."'/><i class='fas fa-info-circle'></i>Ver mais</a> </td>
+                    </tr>";
+                    }
+                ?>
+                </tbody>
+            </table>
             </div>
         </div>
         

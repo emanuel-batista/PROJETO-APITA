@@ -27,6 +27,8 @@
     // $img = $_POST['fileToUpload'];
     $publicado = true;
     $idusuario = '1';
+    //pegar data e hora atual
+    $data = date('Y-m-d H:i:s');
    
         
     //não deixar inserir variavel nula
@@ -58,7 +60,7 @@
         }
         }
         //inserir no banco de dados
-        $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, publicado_noticia, id_usuario) VALUES ('$titulo', '$conteudo', '$categoria', '$target_file', '$publicado', '$idusuario');";
+        $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, publicado_noticia, id_usuario, created_at) VALUES ('$titulo', '$conteudo', '$categoria', '$target_file', '$publicado', '$idusuario', '$data');";
         
         $result = mysqli_query($conn, $sql);
         ?>

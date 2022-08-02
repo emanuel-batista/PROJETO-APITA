@@ -31,7 +31,7 @@
         $result = mysqli_query($conn, $sql);
         if($result){
             echo "'<script>alert('Notícia atualizada com sucesso!');</script>'";
-            echo "<script>window.location.href = '../noticia/noticia.php';</script>";
+            echo '<script>window.location.href = "../noticia/noticia.php";</script>';
         }else{
             echo "<h1>Erro ao atualizar notícia!</h1>";
             echo "<a href='noticia.php' class='btn btn-primary'>Voltar</a>";

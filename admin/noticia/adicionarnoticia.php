@@ -9,17 +9,20 @@
     <title>Criar Notícia</title>
     <style>
         .container{
-            width: 70vh;
-            height: 55vh;
+            width: 100vw;
+            height: 100vh;
             flex: auto;
             display: flex;
             flex-direction: column;
-            justify-content: flex-end;
+            justify-content: center;
             justify-items: column-reverse;
-            
+            color: white;
+            align-items: center;
         }
 
-      
+        body{
+            background-color: #000A66;
+        }
     </style>
 </head>
 <body>

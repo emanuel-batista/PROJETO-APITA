@@ -31,7 +31,7 @@
     <body>
         <div class="aaa" style="height: 100%;/* flex: auto; */display: flex;flex-direction: row;">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; height: 100vh;" id="sidebar-admin">
-                <a href="/" class="justify-items-center">
+                <a href="../../public/index.php" class="justify-items-center">
                 <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
                 <img src="../../static/images/apita.svg" alt="logo" class="img-fluid" width="50px" height="50px">
                 </a>
@@ -54,18 +54,7 @@
                         Usuários
                         </a>
                     </li>
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                        Products
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                        Customers
-                        </a>
-                    </li>
+                    
                 </ul>
                 <hr>
                 <div class="dropdown">

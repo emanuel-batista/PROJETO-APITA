@@ -14,6 +14,8 @@
     //Deus ajuda
         $target_dir = "../../static/images/imagens-noticia/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        var_dump($_FILES["fileToUpload"]);
+        $imagembb = $_FILES["fileToUpload"]["name"];
         $uploadOk = 0;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
 
@@ -61,7 +63,7 @@
         }
         }
         //inserir no banco de dados
-        $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, publicado_noticia, id_usuario, created_at) VALUES ('$titulo', '$conteudo', '$categoria', '$target_file', '$publicado', '$idusuario', '$data');";
+        $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, publicado_noticia, id_usuario, created_at) VALUES ('$titulo', '$conteudo', '$categoria', '$imagembb', '$publicado', '$idusuario', '$data');";
         
         $result = mysqli_query($conn, $sql);
         ?>

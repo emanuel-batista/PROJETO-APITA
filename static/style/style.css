@@ -15,7 +15,7 @@
 
 
 .body {
-  background-color: #FFE81D;
+  background-color: #0000;
   opacity: 1;
   background-image:  linear-gradient(#000A66 1px, transparent 1px), linear-gradient(to right, #000A66 1px, #FFE81D 1px);
   background-size: 20px 20px;
@@ -41,7 +41,7 @@
 
     display: flex;
     align-items: center;
-    color: #BDB606;
+    color: #DAA520;
     font-family: 'Roboto';
     text-decoration: none;
     letter-spacing: 0.175em;
@@ -67,10 +67,23 @@
     margin-left: 10px;
 }
 
-.imgpageinicial{
-  max-width: 100%;
-  height: auto;
+.container{
+  align-self: center;
+  margin-top: 150px;
+  max-height: 60%;
+  object-fit: contain;
+
 }
+
+p{ 
+  text-align: center;
+
+}
+
+h1{
+  text-align: center;
+}
+
 
 /* #carousel{
 

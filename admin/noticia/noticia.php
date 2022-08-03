@@ -27,6 +27,7 @@
         <!-- incluir dashboard_functions -->
         <title>AP!TA - O melhor PORTAL</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
     </head>
     <body>
         <div class="aaa" style="height: 100%;/* flex: auto; */display: flex;flex-direction: row;">
@@ -99,7 +100,7 @@
                         echo "<td>".$row['conteudo_noticia']."</td>";
                         echo "<td>".$row['categoria_noticia']."</td>";
                         echo "<td>
-                        <a class='btn btn-sm btn-primary' href='editarnoticia.php?id=". $row["id_noticia"] . "&nome=". $row['titulo_noticia']."'/> <i class='far fa-edit'></i> Editar</a>
+                        <a class='btn btn-sm btn-primary' href='editarnoticia.php?id=". $row["id_noticia"] . "&nome=". $row['titulo_noticia']."'/> <i class='far fa-edit'></i> </i> <span class='material-symbols-outlined'>edit</span></a>
                         
 
                     </td>

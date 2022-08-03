@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img{
+            align-self: center;
+            margin-top: 10px;
+            max-height: 60%;
+            object-fit: contain;
+        }
+        .container{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 90px;
+        }
+
+        .btn{
+            width: 20%;
+            align-self: center;
+            margin-top: 20px;
+            font-weight: 700 !important;
+            background-color: #d9d9d9 !important;
+            border-radius: 50px !important;    
+            color: black !important;
+
+        }
+
+        .btn:hover{
+            background-color: #ffc107 !important;
+            color: #fff;
+            border-radius: 50px;
+        }
+
+        .criado{
+            color: #d9d9d9;
+        }
+    </style>
+    <?php include '../../includes/config.php'; ?>
+    <?php 
+        $nome = $_GET['nome'];
+        $id = $_GET['id'];
+        echo "<title>Ver entrevista '". $nome ."'</title>";
+    ?>
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    
+</head>
+<body>
+    <?php
+        echo("<div class='container'>");
+        echo("<h1>$nome</h1>");
+        //pegar conteudo da noticia no banco de dados
+        $sql = "select entrevista.*, usuario.id_usuario, usuario.nome from entrevista inner join usuario on entrevista.id_usuario = usuario.id_usuario or usuario.nome = usuario.nome where id_entrevista = $id;";
+        $result = mysqli_query($conn, $sql);
+        if($result){
+            $row = mysqli_fetch_assoc($result);
+            echo("<p>".$row['CONTEUDO_ENTREVISTA']."</p>");
+            //ECHO DE IFRAME
+            echo("<iframe src='".$row['LINK_ENTREVISTA']."' width='100%' height='100%' frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>");
+            //mostrar nome do autor da notícia
+            echo("<p class='criado'>Autor: ".$row['nome']."</p>");
+            //botão de voltar para notícia.php
+            echo("<a href='entrevista.php' class='btn'>Voltar</a>");
+            echo("</div>");
+        }
+        else{
+            echo("<h1>Erro ao pegar conteúdo da notícia!</h1>");
+        }
+    
+        
+    
+    ?>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

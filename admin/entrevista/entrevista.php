@@ -6,7 +6,24 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <?php include '../../includes/config.php';
          ?>
+         <style>
+            .criar{
+                width: 150px;
+                height: 40px;
+                place-self: center;     
+                text-align: center;
+            }
+
+            .criar:hover{
+                
+                background-color: #0d6efd;
+                text-decoration: none;
+                color: white;
+            }
+        </style>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0" />
         <!-- incluir dashboard_functions -->
         <title>AP!TA - O melhor PORTAL</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -14,7 +31,7 @@
     <body>
         <div class="aaa" style="height: 100%;/* flex: auto; */display: flex;flex-direction: row;">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; height: 100vh;" id="sidebar-admin">
-                <a href="../../public/index" class="justify-items-center">
+                <a href="../../public/index.php" class="justify-items-center">
                 <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
                 <img src="../../static/images/apita.svg" alt="logo" class="img-fluid" width="50px" height="50px">
                 </a>
@@ -55,7 +72,7 @@
             <!-- form de inserção de post  -->
             <div class="card" style="width: 170vh;">
             <!-- <button id="dd__new__list" type="button" class="btn btn-success position-absolute" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-plus"></i> Add a new List</button> -->
-            <a href="adicionarnoticia.php" class='btn btn-success criar font-weight-bold'>Linkar Entrevista</a>
+            <a href="adicionarent.php" class='btn btn-success criar font-weight-bold'>Linkar Entrevista</a>
             <table class="table table-hover">
                 <thead>
                 <tr>
@@ -78,11 +95,11 @@
                         echo "<td>".$row['titulo_entrevista']."</td>";
                         echo "<td>".$row['link_entrevista']."</td>";
                         echo "<td>
-                        <a class='btn btn-sm btn-primary' href='editarnoticia.php?id=". $row["id_entrevista"] . "&nome=". $row['titulo_entrevista']."'/> <i class='far fa-edit'></i> Editar</a>
+                        <a class='btn btn-sm btn-primary' href='editarentrevista.php?id=". $row["id_entrevista"] . "&nome=". $row['titulo_entrevista']."'/> <i class='far fa-edit'></i> <span class='material-symbols-outlined'>edit</span></a>
                         
 
                     </td>
-                    <td><a class='btn btn-sm btn-info' href='vernoticia.php?id=". $row["id_entrevista"] ."&nome=".$row["titulo_entrevista"]."'/><i class='fas fa-info-circle'></i>Ver mais</a> </td>
+                    <td><a class='btn btn-sm btn-info' href='verentrevista.php?id=". $row["id_entrevista"] ."&nome=".$row["titulo_entrevista"]."'/><i class='fas fa-info-circle'></i>Ver mais</a> </td>
                     </tr>";
                     }
                 ?>

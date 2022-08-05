@@ -21,13 +21,15 @@
       
       ?> 
     <div class="container"> 
-      <img src= "../static/images/imagens-noticia/<?php echo $posts[0]["IMG_NOTICIA"]?>" class="img-fluid" alt="..." class='img-hero' style='max-width: 700px; object-fit: fill; border-radius: 40px;'>
-      <div class="hero-section">
-        <h1 class="h1-hero"><strong><?php echo $posts[0]['TITULO_NOTICIA']; ?></strong></h1>
-        <p class="p-hero"><?php echo $posts[0]['CONTEUDO_NOTICIA']; ?></p>
-        <a href="#"><span class="material-symbols-outlined">forward</span class="enter-hero"></a>
+      <div class="sub-container">
+        <img src= "../static/images/imagens-noticia/<?php echo $posts[0]["IMG_NOTICIA"]?>" class="img-fluid" alt="..." class='img-hero' style='max-width: 700px; max-height: 500px; object-fit: cover; border-radius: 40px;'>
+        <div class="hero-section">
+          <h1 class="h1-hero"><strong><?php echo $posts[0]['TITULO_NOTICIA']; ?></strong></h1>
+          <p class="p-hero"><?php echo $posts[0]['CONTEUDO_NOTICIA']; ?></p>
+          <a href="#"><span class="material-symbols-outlined">forward</span class="enter-hero"></a>
+        </div>
+        </img> 
       </div>
-      </img> 
     </div> 
   </div>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

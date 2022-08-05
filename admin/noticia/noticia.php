@@ -19,6 +19,10 @@
                 text-decoration: none;
                 color: white;
             }
+
+            .d-flex{
+                overflow: hidden;
+            }
             
             
         </style>

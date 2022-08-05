@@ -26,12 +26,15 @@
         <div class="hero-section">
           <h1 class="h1-hero"><strong><?php echo $posts[0]['TITULO_NOTICIA']; ?></strong></h1>
           <p class="p-hero"><?php echo $posts[0]['CONTEUDO_NOTICIA']; ?></p>
-          <a href="#"><span class="material-symbols-outlined">forward</span class="enter-hero"></a>
+          <button class='btn btn-warning'><a href="#" class='ver-mais-hero'>Ver Mais</a></button>
         </div>
         </img> 
       </div>
     </div> 
+
+    </div>
   </div>
+  <div class="container-2" style="height: 100vh;">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body> 
 </html>

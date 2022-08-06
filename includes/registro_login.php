@@ -1,4 +1,5 @@
 <?php 
+	include_once 'config.php';
 	// variable declaration
 	$username = "";
 	$email    = "";
@@ -66,31 +67,36 @@
 	if (isset($_POST['login_btn'])) {
 		$username = esc($_POST['username']);
 		$password = esc($_POST['password']);
-
 		if (empty($username)) { array_push($errors, "Username required"); }
 		if (empty($password)) { array_push($errors, "Password required"); }
 		if (empty($errors)) {
-			$password = md5($password); // encrypt password
-			$sql = "SELECT * FROM users WHERE username='$username' and password='$password' LIMIT 1";
+			/* $password = md5($password); */ // encrypt password
+			$sql = "SELECT * FROM usuario WHERE username='$username' and senha='$password' LIMIT 1";
 
 			$result = mysqli_query($conn, $sql);
+			$row = mysqli_fetch_assoc($result);
+			$_SESSION['username'] = $username;
+			$_SESSION['ranking'] = $row['RANKING'];
+			var_dump($result);
 			if (mysqli_num_rows($result) > 0) {
 				// get id of created user
-				$reg_user_id = mysqli_fetch_assoc($result)['id']; 
+				$reg_user_id = mysqli_fetch_assoc($result)['ID_USUARIO']; 
 
 				// put logged in user into session array
 				$_SESSION['user'] = getUserById($reg_user_id); 
 
 				// if user is admin, redirect to admin area
-				if ( in_array($_SESSION['username']['role'], ["Admin", "Author"])) {
+				if ( in_array($_SESSION["USERNAME"]["RANKING"], ["admin", "0"])) {
+					var_dump($_SESSION);
 					$_SESSION['message'] = "You are now logged in";
 					// redirect to admin area
-					header('location: ' . BASE_URL . '/admin/dashboard.php');
+					header('location: ' . BASE_URL . '/admin/noticia.php');
 					exit(0);
 				} else {
 					$_SESSION['message'] = "You are now logged in";
 					// redirect to public area
-					header('location: index.php');				
+					/* header('location: index.php'); */				
+					echo 'ola';
 					exit(0);
 				}
 			} else {
@@ -113,7 +119,7 @@
 	function getUserById($id)
 	{
 		global $conn;
-		$sql = "SELECT * FROM users WHERE id=$id LIMIT 1";
+		$sql = "SELECT * FROM usuario WHERE id_usuario=$id LIMIT 1";
 
 		$result = mysqli_query($conn, $sql);
 		$user = mysqli_fetch_assoc($result);

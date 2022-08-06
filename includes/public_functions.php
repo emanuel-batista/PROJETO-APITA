@@ -22,6 +22,15 @@ function getPublishedPostsRecent(){
 
 	// fetch all posts as an associative array called $posts
 	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
 	return $posts;
+}
+
+//function getUserById
+function getUserById($id){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM usuario WHERE id_usuario=$id";
+	$result = mysqli_query($conn, $sql);
+	$user = mysqli_fetch_assoc($result); // fetch query result as associative array
+	return $user;
 }

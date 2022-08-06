@@ -63,7 +63,7 @@
         }
         }
         //inserir no banco de dados
-        $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, publicado_noticia, id_usuario, created_at) VALUES ('$titulo', '$conteudo', '$categoria', '$imagembb', '$publicado', '$idusuario', '$data');";
+        $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, publicado_noticia, id_usuario, created_at) VALUES ('$titulo', '$conteudo', '$categoria', '$imagembb', '$publicado', '$idusuario', now());";
         
         $result = mysqli_query($conn, $sql);
         ?>

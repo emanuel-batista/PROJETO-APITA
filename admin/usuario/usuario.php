@@ -8,6 +8,7 @@
         <!-- incluir dashboard_functions -->
         <?php include '../../includes/config.php';
          ?>
+         <?php include_once '../verificaRanking.php'; ?>
         <title>AP!TA - O melhor PORTAL</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     </head>

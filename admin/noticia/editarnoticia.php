@@ -67,7 +67,7 @@
     //titulo da página
     echo "<title>Editar Notícia $nome</title>";
     ?>
-
+    <?php include_once '../verificaRanking.php'; ?>
 
 </head>
 <body>

@@ -1,6 +1,7 @@
 <?php
 // Include the database configuration file
 include '../../includes/config.php';
+include_once '../verificaRanking.php';
 $statusMsg = '';
 
 // File upload path

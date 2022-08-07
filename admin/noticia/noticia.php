@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
+        <?php include_once '../verificaRanking.php'; ?>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,7 +66,9 @@
                 <div class="dropdown">
                     <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                         <!-- <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2"> -->
-                        <strong>Nome<!-- colocar tag de php puxando nome da pessoa em toda a tag strong --></strong>
+                        <strong><?php $username = $_SESSION['username'];
+                            echo $username;
+                        ?></strong>
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                         <li><a class="dropdown-item" href="#">Perfil</a></li>

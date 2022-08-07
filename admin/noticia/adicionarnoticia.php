@@ -24,6 +24,7 @@
             background-color: #000A66;
         }
     </style>
+    <?php include_once '../verificaRanking.php'; ?>
 </head>
 <body>
     <div class='container'>

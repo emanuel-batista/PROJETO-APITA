@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <?php include '../../includes/config.php'; ?>
     <title>Update na Entrevista</title>
+    <?php include_once '../verificaRanking.php'; ?>
 </head>
 <body>
     <?php

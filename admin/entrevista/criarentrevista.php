@@ -1,7 +1,7 @@
 <?php
 //incluir config
 require_once '../../includes/config.php';
-
+include_once '../verificaRanking.php';
 $titulo = addslashes($_POST['titulo']);
 $conteudo = addslashes($_POST['conteudo']);
 $link = addslashes($_POST['link']);

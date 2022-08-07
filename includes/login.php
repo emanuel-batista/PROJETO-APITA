@@ -13,8 +13,10 @@
 			$sql = "SELECT * FROM usuario WHERE username = '$username'";
 			$result = mysqli_query($conn, $sql);
 			$row = mysqli_fetch_assoc($result);
-			$_SESSION['ranking'] = $row['RANKING'];
+			$_SESSION['ranking'] = addslashes($row['RANKING']);
 			$_SESSION['foto'] = $row['FOTO'];
+			$_SESSION['logado'] = true;
+			$_SESSION['nome'] = $row['NOME'];
 			header("Location: ../public/index.php");
 		}else{
 			echo "Usuário ou senha incorretos!";

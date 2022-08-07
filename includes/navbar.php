@@ -49,7 +49,7 @@
             //verificar se há sessão ativa
             if(!isLoggedIn()){
                 echo "";
-            }elseif ($_SESSION['ranking'] == '0') {
+            }elseif ($_SESSION['ranking'] == '3') {
 
                 echo "<a href='../admin/noticia/noticia.php' class='icon'><img src='../static/images/admin-panel.svg' alt='LOGIN' id='icon'></a>";
             }

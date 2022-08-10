@@ -28,6 +28,7 @@
             
         </style>
         <?php include '../../includes/config.php';
+            
          ?>
         <!-- incluir dashboard_functions -->
         <title>AP!TA - O melhor PORTAL</title>

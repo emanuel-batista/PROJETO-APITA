@@ -65,7 +65,7 @@
             //echo da imagem da notícia
             echo("<img src='../../static/images/imagens-noticia/".$row['IMG_NOTICIA']."' alt='Imagem da notícia' width='50%'><br>");
             //mostrar nome do autor da notícia
-            echo("<p class='criado'>Autor: ".$row['nome']."</p>");
+            echo("<p class='criado'>Autor: ".$row['nome_usuario']."</p>");
             echo("<p class='criado'>Notícia criada em: ". $row['created_at'] . "</p>");
             //botão de voltar para notícia.php
             echo("<a href='noticia.php' class='btn'>Voltar</a>");

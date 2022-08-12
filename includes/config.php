@@ -1,6 +1,6 @@
 <?php
 
-        
+    session_start();
 
     $sname = "localhost";
     $unmae = "root";

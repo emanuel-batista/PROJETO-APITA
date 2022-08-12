@@ -64,7 +64,9 @@
         }
         }
         //inserir no banco de dados
-        $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, publicado_noticia, id_usuario, created_at) VALUES ('$titulo', '$conteudo', '$categoria', '$imagembb', '$publicado', '$idusuario', now());";
+        //criar váriavel com o nome do autor puxando da sessão
+        $autor = $_SESSION['nome'];
+        $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, publicado_noticia, id_usuario, created_at, nome_usuario) VALUES ('$titulo', '$conteudo', '$categoria', '$imagembb', '$publicado', '$idusuario', now(), '$autor');";
         
         $result = mysqli_query($conn, $sql);
         ?>

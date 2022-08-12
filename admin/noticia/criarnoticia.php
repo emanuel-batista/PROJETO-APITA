@@ -25,7 +25,7 @@
 
     //ajudou
 
-    $titulo = addslashes($_POST['titulo']);
+    $titulo = addslashes(htmlentities($_POST['titulo'], ENT_QUOTES,'UTF-8'));
     $conteudo = addslashes($_POST['conteudo']);
     $categoria = $_POST['categoria'];
     // $img = $_POST['fileToUpload'];

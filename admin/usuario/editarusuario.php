@@ -29,6 +29,7 @@
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <input type="hidden" name="nome" value="<?php echo $nome; ?>">
                     <input type="submit" value="Apagar" class="btn btn-danger">
+                    
                 </form>
             </div>
             <div class="col-md-6">

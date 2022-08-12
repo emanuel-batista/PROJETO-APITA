@@ -15,7 +15,7 @@
     <body>
         <div class="aaa" style="height: 100%;/* flex: auto; */display: flex;flex-direction: row;">
             <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px; height: 100vh;" id="sidebar-admin">
-                <a href="/" class="justify-items-center">
+                <a href="../../public/" class="justify-items-center">
                 <!-- <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg> -->
                 <img src="../../static/images/apita.svg" alt="logo" class="img-fluid" width="50px" height="50px">
                 </a>
@@ -40,14 +40,7 @@
                     </li>
                     <li>
                         <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#grid"></use></svg>
-                        Products
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#" class="nav-link link-dark">
-                        <svg class="bi me-2" width="16" height="16"><use xlink:href="#people-circle"></use></svg>
-                        Customers
+                        Comentários
                         </a>
                     </li>
                 </ul>
@@ -73,7 +66,7 @@
                     <th scope="col">ID</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Username</th>
-                    <th scope="col">Editar</th>
+                    <th scope="col">Apagar</th>
                     <th scope="col">Ver mais</th>
                 </tr>
                 </thead>
@@ -88,10 +81,10 @@
                         echo "<td>".$row['nome']."</td>";
                         echo "<td>".$row['username']."</td>";
                         echo "<td>
-                        <a class='btn btn-sm btn-primary' href='editarusuario.php?id=". $row["id_usuario"] . "&nome=". $row['nome']."'/> <i class='far fa-edit'></i> Editar</a>
+                        <a class='btn btn-sm btn-primary' href='editarusuario.php?id=". $row["id_usuario"] . "&nome=". $row['nome']."'/> <i class='far fa-edit'></i>Apagar</a>
 
                     </td>
-                    <td><a class='btn btn-sm btn-info' href='#'><i class='fas fa-info-circle'></i> Details</a> </td>
+                    <td><a class='btn btn-sm btn-info' href='verusuario.php?id=". $row["id_usuario"] ."&nome=" . $row['nome'] ."'><i class='fas fa-info-circle'></i>Ver mais</a> </td>
                     </tr>";
                     }
                 ?>

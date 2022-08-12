@@ -2,7 +2,7 @@
 //incluir config
 require_once '../../includes/config.php';
 include_once '../verificaRanking.php';
-$titulo = addslashes($_POST['titulo']);
+$titulo = addslashes(htmlentities($_POST['titulo'], ENT_QUOTES,'UTF-8'));
 $conteudo = addslashes($_POST['conteudo']);
 $link = addslashes($_POST['link']);
 //pegar imagem

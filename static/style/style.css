@@ -1,7 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-
-
-
 .nav{ 
     position: fixed;
     width: 100%;
@@ -11,12 +8,10 @@
     background-color: #000A66;
     mix-blend-mode: normal;
 } 
-
 .navbar{
   width: 100%;
   height: 60px;
 }
-
 .mae{
   background-image: url("../images/background-apita.jpg");
   background-size: contain;
@@ -25,7 +20,6 @@
     /* IMG DA LOGO*/
     height: 60px;
 } 
-
 .logo{
     float: left;
     padding-left: 10rem;
@@ -37,30 +31,42 @@
     letter-spacing: 0.175em;
     height: 60px;
 }
-
 .ver-mais-hero{
   font-family: 'Roboto';
   font-weight: 400 !important;
   color: black !important;
   text-decoration: none;
 }
-
 .ver-mais-hero::hover{
   font-family: 'Roboto';
   font-weight: 400 !important;
   color: black !important;
   text-decoration: none;
 }
-
 .btn::hover{
   background-color: rgb(151, 115, 23) !important;
 }
-
 .container-2{
   background-color: #000A66;
+  display: flex;
+  height: 80vh;
+  flex-direction: row-reverse;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+.btn{
+  border-radius: 40px;
+}
+.text-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+  color: #ffc107;
+  width:600px;
 }
 .icon{
-
     display: flex;
     align-items: center;
     color: #DAA520;
@@ -69,16 +75,11 @@
     letter-spacing: 0.175em;
     height: 20px;
     padding: 20px;
-
-
 }
-
 /* #icon{
     height: 20px;
     padding: 20px;
 } */
-
-
 .form-login{
     display: flex;
     flex-direction: column;
@@ -91,17 +92,12 @@
     justify-content: space-evenly;
     border-radius: 20px;
     margin: 10px;
-
 }
-
-
-
 .botoes-login{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
 }
-
 .input-login{
   border-top: none;
   border-left: none;
@@ -113,11 +109,9 @@
   font-weight: bolder;
   padding: 10px;
 }
-
 .btn-light{
   font-weight: bolder;
 }
-
 .icon-com-foto{
   height: 50px;
   max-width: 50px;
@@ -125,14 +119,12 @@
   object-fit: cover;
   border-radius: 100px;
 }
-
 .input-login::placeholder{
   color: white;
   font-size: large;
   font-weight: bolder;
   padding: 10px;
 }
-
 .input-login::focus-visible{
   border-bottom: ridge;
   border-top: none;
@@ -140,7 +132,6 @@
   border-right: none;
   background-color: transparent;
 }
-
 .links{  /* estilização icons navbar */
     position: absolute;
     right: 0px;
@@ -151,7 +142,6 @@
     margin-left: 10px;
     fill: #FFE81D;
 }
-
 .container{
   max-height: 100vh;
   height: 100vh;
@@ -164,16 +154,13 @@
   align-content: center;
   object-fit: contain;
   padding: 90px;
-  
 }
-
 .mae-login{
   background-image: url('../images/background-login.jpg');
   background-size: cover;
   display: flex;
 }
 .sub-container{
-  
   display: flex;
   align-items: center;
   border-radius: 40px;
@@ -185,7 +172,6 @@
   height: fit-content;
   background-color: white;
 }
-
 .hero-section{
   display: flex;
   flex-direction: column;
@@ -195,58 +181,44 @@
   justify-content: space-evenly;
   flex-wrap: nowrap;
 }
-
 .h1-hero{
   text-align: justify;
 }
-
 .p-hero{
   display: flex; 
   text-align: justify;
-  
 }
-
 .enter-hero{
   width: 10px;
   color: yellow !important;
 }
-
 .img-hero{
   max-width: 50%;
   object-fit: contain;
 }
-
 h1{
   text-align: center;
 }
-
-
 /* #carousel{
-
   padding-top: 20vh;
   width: 100vw;
   height: 100vh;
   transition: all 0.3s ease-out;
   object-fit: contain;
 }
-
 .carouselExampleDark {
   flex-basis: auto;
   flex-flow: row nowrap;
 } */
-
-
 /* body {
     font-family: "Poppins", sans-serif;
     background-color: #fafafa;
   }
-  
   .row {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
   .card {
     border-radius: 5px;
     box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
@@ -259,36 +231,28 @@ h1{
     transition: all 0.3s ease-out;
     height: auto;
   }
-  
   .card:hover {
     transform: translateY(-5px);
     cursor: pointer;
   }
-  
   .card p {
     color: #a3a5ae;
     font-size: 16px;
   }
-  
   .image {
     float: right;
     max-width: 64px;
     max-height: 64px;
   }
-  
   .blue {
     border-left: 3px solid #4895ff;
   }
-  
   .green {
     border-left: 3px solid #3bb54a;
   }
-  
   .red {
     border-left: 3px solid #b3404a;
   }  
-
-
   .footer {
     position: fixed;
     left: 0;
@@ -299,18 +263,15 @@ h1{
     box-shadow: 0px -3px 7px 0px rgba(50, 50, 50, 0.53);
     height: 50px;
 }
-
 .items {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
 }
-
 .item {
     margin: 10px 50px;
 }
-
 .images {
     max-width: 100%;
     height: auto;
@@ -324,33 +285,27 @@ h1{
     margin-right: 200px;
     margin-left: 80px;
   }
-
 .card-body {
     width: 70%;
     height: 70%;
     position: sticky;
 }
-
 .card-mb-3{
     margin: 20% 10%;
     width: 50%;
     height: auto;
     align-items: right;
-
 }
-
 .static-images {
     margin: 20% 10%;
     width: 50%;
     height: auto;
     border-radius: 8px;
 }
-
 .col-md-4 {
     margin: 30% 20%;
     width: auto;
     height: auto;
     position: sticky;
-
 }
  */

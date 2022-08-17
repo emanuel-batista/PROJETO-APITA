@@ -19,9 +19,11 @@ function getPublishedPostsRecent(){
 	global $conn;
 	$sql = "SELECT * FROM noticia ORDER BY id_noticia DESC LIMIT 1";
 	$result = mysqli_query($conn, $sql);
-
 	// fetch all posts as an associative array called $posts
 	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+	//pegar 250 caracteres do conteúdo da notícia
+	$posts[0]['CONTEUDO_NOTICIA'] = substr($posts[0]['CONTEUDO_NOTICIA'], 0, 250) . "...";
+	
 	return $posts;
 }
 

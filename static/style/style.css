@@ -12,6 +12,16 @@
   width: 100%;
   height: 60px;
 }
+
+.logo-apita{
+  /** animação de aumentar **/
+  transition: .2s;
+}
+.logo-apita:hover{
+  /** animação de aumentar **/
+  transform: scale(1.2);
+}
+
 .mae{
   background-image: url("../images/background-apita.jpg");
   background-size: contain;
@@ -36,6 +46,7 @@
   font-weight: 400 !important;
   color: black !important;
   text-decoration: none;
+  text-transform: uppercase;
 }
 .ver-mais-hero::hover{
   font-family: 'Roboto';
@@ -43,7 +54,7 @@
   color: black !important;
   text-decoration: none;
 }
-.btn::hover{
+.btn:hover{
   background-color: rgb(151, 115, 23) !important;
 }
 .container-2{
@@ -171,7 +182,15 @@
   flex-direction: row;
   height: fit-content;
   background-color: white;
+  transition: transform .2s;
+
 }
+
+.sub-container:hover{
+  transform: scale(1.1);
+
+}
+
 .hero-section{
   display: flex;
   flex-direction: column;
@@ -183,6 +202,7 @@
 }
 .h1-hero{
   text-align: justify;
+  text-transform: uppercase;
 }
 .p-hero{
   display: flex; 

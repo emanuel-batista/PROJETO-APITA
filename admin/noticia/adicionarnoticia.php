@@ -39,7 +39,14 @@
             </div>
             <div class="form-group">
                 <label for="categoria">Categoria</label>
-                <input type="text" class="form-control" id="categoria" name="categoria" placeholder="Categoria">
+                <select class="form-control" aria-label="categoria" name='categoria'>
+                    <option selected>Escolha uma categoria:</option>
+                    <option value="volei">Vôlei</option>
+                    <option value="futebol">Futebol</option>
+                    <option value="basquete">Basquete</option>
+                    <option value="copa">Copa</option>
+                    <option value="olimpiadas">Olimpíadas</option>
+                </select>
             </div>
             <div class="form-group">
                 <label for="fileToUpload">Select image to upload:</label>

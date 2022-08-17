@@ -95,7 +95,7 @@
                 <tbody>
                 <?php
                     //$id = $row['id'];
-                    $sql = "SELECT id_noticia, titulo_noticia, conteudo_noticia, categoria_noticia FROM noticia";
+                    $sql = "SELECT id_noticia, titulo_noticia, conteudo_noticia, categoria_noticia FROM noticia ORDER BY id_noticia DESC";
                     $result = mysqli_query($conn, $sql);
                     
                     while($row = mysqli_fetch_assoc($result)){

@@ -30,7 +30,7 @@
     $categoria = $_POST['categoria'];
     // $img = $_POST['fileToUpload'];
     $publicado = true;
-    $idusuario = '1';
+    $idusuario = $_SESSION['id'];
     //pegar data e hora atual
     $data = date('Y-m-d H:i:s');
    

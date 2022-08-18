@@ -4,7 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script
+    type="text/javascript"
+    src='https://cdn.tiny.cloud/1/ekkoemlaabx56uscxsc09zwuin443qhsqhsyieo5f9lbtm8l/tinymce/6/tinymce.min.js'
+    src='ekkoemlaabx56uscxsc09zwuin443qhsqhsyieo5f9lbtm8l'
+    referrerpolicy="origin">
+    </script>
+    <script type="text/javascript">
+    tinymce.init({
+        selector: '#myTextarea',
+        width: 600,
+        height: 300,
+        plugins: [
+        'advlist', 'autolink', 'link', 'image', 'lists', 'charmap', 'preview', 'anchor', 'pagebreak',
+        'searchreplace', 'wordcount', 'visualblocks', 'visualchars', 'code', 'fullscreen', 'insertdatetime',
+        'media', 'table', 'emoticons', 'template', 'help'
+        ],
+        toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | ' +
+        'bullist numlist outdent indent | link image | print preview media fullscreen | ' +
+        'forecolor backcolor emoticons | help',
+        menu: {
+        favs: { title: 'My Favorites', items: 'code visualaid | searchreplace | emoticons' }
+        },
+        menubar: 'favs file edit view insert format tools table help',
+        content_css: 'css/content.css'
+    });
+    </script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <title>Criar Notícia</title>
     <style>
@@ -23,6 +48,16 @@
         body{
             background-color: #000A66;
         }
+
+        .tox{
+            width: 95vw !important;
+            height: 40vh !important;
+        }
+
+        textarea{
+            width: 95vw !important;
+            height: 50vh !important;
+        }
     </style>
     <?php include_once '../verificaRanking.php'; ?>
 </head>
@@ -34,9 +69,13 @@
                 <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título">
             </div>    
             <div class="form-group">
+                <label for="titulo">Chamada</label>
+                <input type="text" class="form-control" id="chamada" name="chamada" placeholder="Chamada">
+            </div>    
+            <!-- <div class="form-group"> -->
                 <label for="conteudo">Conteúdo</label>
-                <textarea class="form-control" id="conteudo" name="conteudo" rows="3"></textarea>
-            </div>
+                <textarea class="form-control" id="myTextarea" name="conteudo">Oiii</textarea>
+            <!-- </div> -->
             <div class="form-group">
                 <label for="categoria">Categoria</label>
                 <select class="form-control" aria-label="categoria" name='categoria'>

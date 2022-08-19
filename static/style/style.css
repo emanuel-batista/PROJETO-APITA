@@ -153,11 +153,11 @@
     margin-left: 10px;
     fill: #FFE81D;
 }
- .container{
+ .flex-container{
   max-height: 100vh;
   height: 100vh;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   flex-wrap: nowrap;
   align-items: center;

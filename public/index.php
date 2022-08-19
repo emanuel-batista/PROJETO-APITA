@@ -17,7 +17,7 @@
       <?php require_once(ROOT_PATH . '/navbar.php'); ?>  
       <!-- incluir public_functions --> 
       <?php require_once(ROOT_PATH . '/public_functions.php') ?> 
-    </div> <!-- navbar -->
+    </div> 
     <?php $posts = getPublishedPostsRecent(); 
     var_dump($_SESSION);
       ?> 
@@ -26,7 +26,7 @@
         <img src= "../static/images/imagens-noticia/<?php echo $posts[0]["IMG_NOTICIA"]?>" class="img-fluid" alt="..." class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>
         <div class="hero-section">
           <h1 class="h1-hero"><strong><?php echo $posts[0]['TITULO_NOTICIA']; ?></strong></h1>
-          <p class="p-hero"><?php echo $posts[0]['CONTEUDO_NOTICIA']; ?></p>
+          <p class="p-hero"><?php echo $posts[0]['CHAMADA_NOTICIA']; ?></p>
           <button class='btn btn-warning'><a href="#" class='ver-mais-hero'>Ver Mais</a></button>
         </div>
         </img> 
@@ -34,20 +34,6 @@
     </div> 
     </div>
   </div>
-
-  <div class="sub-container-2">
-        <img src= "../static/images/imagens-noticia/<?php echo $posts[0]["IMG_NOTICIA"]?>" class="img-fluid" alt="..." class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>
-        <div class="hero-section">
-          <h1 class="h1-hero"><strong><?php echo $posts[0]['TITULO_NOTICIA']; ?></strong></h1>
-          <p class="p-hero"><?php echo $posts[0]['CONTEUDO_NOTICIA']; ?></p>
-          <button class='btn btn-warning'><a href="#" class='ver-mais-hero'>Ver Mais</a></button>
-        </div>
-        </img> 
-      </div>
-    </div> 
-    </div>
-  </div>
-
   <div class="container-2">
     <div class="text-2">
       <h2 class='h2-2'><strong> BOMBA!!!! NEYMAR REVELA QUE IRÁ FUGIR PARA A TURQUIA</strong></h2>

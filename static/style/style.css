@@ -195,6 +195,7 @@
 
 }
 
+<<<<<<< HEAD
 .sub-container-2{
   display: flex;
   align-items: center;
@@ -213,6 +214,11 @@
 } 
 
 .sub-container-2:hover{
+=======
+
+
+.sub-container:hover{
+>>>>>>> 57d86f35ff72fa32fa3e5e202bc9eefce11f6811
   transform: scale(1.1);
 
 }

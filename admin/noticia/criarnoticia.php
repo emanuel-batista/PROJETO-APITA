@@ -26,8 +26,23 @@
     //ajudou
 
     $titulo = addslashes(htmlentities($_POST['titulo'], ENT_QUOTES,'UTF-8'));
-    $conteudo = addslashes($_POST['conteudo']);
+    $conteudo = $_POST['conteudo'];
+    //colocar mysql_escape_string para apóstrofes e aspas simples
+    function mysql_escape_mimic($inp) {
+        if(is_array($inp))
+            return array_map(__METHOD__, $inp);
+    
+        if(!empty($inp) && is_string($inp)) {
+            return str_replace(array('\\', "\0", "\n", "\r", "'", '"', "\x1a"), array('\\\\', '\\0', '\\n', '\\r', "\\'", '\\"', '\\Z'), $inp);
+        }
+    
+        return $inp;
+    }
+
+    $conteudo_esc = mysql_escape_mimic($conteudo);
+
     $categoria = $_POST['categoria'];
+    $chamada = addslashes($_POST['chamada']);
     // $img = $_POST['fileToUpload'];
     $publicado = true;
     $idusuario = $_SESSION['id'];
@@ -66,7 +81,7 @@
         //inserir no banco de dados
         //criar váriavel com o nome do autor puxando da sessão
         $autor = $_SESSION['nome'];
-        $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, publicado_noticia, id_usuario, created_at, nome_usuario) VALUES ('$titulo', '$conteudo', '$categoria', '$imagembb', '$publicado', '$idusuario', now(), '$autor');";
+        $sql = "INSERT INTO noticia (titulo_noticia, conteudo_noticia, categoria_noticia, img_noticia, chamada_noticia, publicado_noticia, id_usuario, created_at, nome_usuario) VALUES ('$titulo', '$conteudo_esc', '$categoria', '$imagembb', '$chamada', '$publicado', '$idusuario', now(), '$autor');";
         
         $result = mysqli_query($conn, $sql);
         ?>

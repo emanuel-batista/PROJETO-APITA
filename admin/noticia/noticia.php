@@ -95,17 +95,17 @@
                 <tbody>
                 <?php
                     //$id = $row['id'];
-                    $sql = "SELECT id_noticia, titulo_noticia, conteudo_noticia, categoria_noticia FROM noticia ORDER BY id_noticia DESC";
+                    $sql = "SELECT id_noticia, titulo_noticia, conteudo_noticia, chamada_noticia, categoria_noticia FROM noticia ORDER BY id_noticia DESC";
                     $result = mysqli_query($conn, $sql);
                     
                     while($row = mysqli_fetch_assoc($result)){
-                        if(strlen($row['conteudo_noticia']) > 20){
-                            $row['conteudo_noticia'] = substr($row['conteudo_noticia'], 0, 20) . "...";
+                        if(strlen($row['chamada_noticia']) > 20){
+                            $row['chamada_noticia'] = substr($row['chamada_noticia'], 0, 20) . "...";
                         }
                         echo "<tr>";
                         echo "<td name='id'>".$row['id_noticia']."</td>";
                         echo "<td>".$row['titulo_noticia']."</td>";
-                        echo "<td>".$row['conteudo_noticia']."</td>";
+                        echo "<td>".$row['chamada_noticia']."</td>";
                         echo "<td>".$row['categoria_noticia']."</td>";
                         echo "<td>
                         <a class='btn btn-sm btn-primary' href='editarnoticia.php?id=". $row["id_noticia"] . "&nome=". $row['titulo_noticia']."'/> <i class='far fa-edit'></i> </i> <span class='material-symbols-outlined'>edit</span></a>

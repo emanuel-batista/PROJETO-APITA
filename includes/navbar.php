@@ -12,7 +12,7 @@
         }
     
     ?>
-        <a href="index.php" class='logo'><img src="../static/images/apita.svg" alt="LOGO DO SITE" id='logo' class='logo-apita'>AP!TA</a>
+        <a href="index.php" class='logo'><img src="../static/images/apita.svg" alt="LOGO DO SITE" id='logo' class='logo-apita'></a>
         <div class="links">
             <a href="index.php" class='icon'><img src="../static/images/HOME.svg" alt="HOME" id='icon' style="fill: yellow;"></a>
             <a href="#" class='icon'><img src="../static/images/ENTREVISTAS.svg" alt="ENTREVISTAS" id='icon'></a>

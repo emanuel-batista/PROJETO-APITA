@@ -12,6 +12,7 @@
     $nome = addslashes($_POST['nome']);
     $username = addslashes($_POST['username']);
     $password = addslashes($_POST['password']);
+    $redes = addslashes($_POST['redesocial']);
 
     if (empty($username) || empty($password)) {
         echo '<script>alert("Preencha todos os campos!");</script>';
@@ -42,7 +43,7 @@
         }
         }
 
-        $sql = "INSERT INTO usuario (nome, username, senha, foto, created_at) VALUES ('$nome', '$username', '$password', '$imagembb', now());";
+        $sql = "INSERT INTO usuario (nome, username, senha, foto, rede_social, created_at) VALUES ('$nome', '$username', '$password', '$imagembb', '$redes', now());";
         $result = mysqli_query($conn, $sql);
         if($result){
             echo '<script>alert("Usuário cadastrado com sucesso!");</script>';

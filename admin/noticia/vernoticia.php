@@ -14,7 +14,6 @@
         }
         .container{
             width: 100vw;
-            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -33,7 +32,7 @@
         }
 
         .btn:hover{
-            background-color: ##ffc107 !important;
+            background-color: #ffc107 !important;
             color: #fff;
             border-radius: 50px;
         }

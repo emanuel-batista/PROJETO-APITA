@@ -18,6 +18,7 @@
             <form action="../includes/register.php" method="post" class='form-login' enctype='multipart/form-data'>
                 <input type="text" name="nome" placeholder="Nome" class='input-login'>
                 <input type="text" name="username" placeholder="Nome de usuário" class='input-login'>
+                <input type="text" name="redesocial" placeholder="Redes sociais" class='input-login'>
                 <input type="password" name="password" placeholder="Senha" class='input-login'>
                 <label for="fileToUpload">Foto de perfil:</label>
                 <input type="file" name="fileToUpload" id="fileToUpload">

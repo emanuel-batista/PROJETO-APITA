@@ -157,9 +157,9 @@
   max-height: 100vh;
   height: 100vh;
   display: flex;
-  flex-flow: row wrap;
+/*    flex-flow: row wrap;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap; */
   align-items: center;
   padding: 30px;
   align-content: center;
@@ -195,6 +195,33 @@
 
 }
 
+<<<<<<< HEAD
+.sub-container-2{
+  display: flex;
+  align-items: center;
+  border-radius: 40px;
+  box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.18);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding: 30px;
+  flex-direction: row;
+  height: fit-content;
+  background-color: white;
+  transition: transform .2s;
+  flex-direction: row;
+  justify-content: space-around;
+
+} 
+
+.sub-container-2:hover{
+=======
+
+
+.sub-container:hover{
+>>>>>>> 57d86f35ff72fa32fa3e5e202bc9eefce11f6811
+  transform: scale(1.1);
+
+}
 
 .hero-section{
   display: flex;

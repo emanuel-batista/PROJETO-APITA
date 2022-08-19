@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+.nav{ 
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    left: 0px;
+    top: 0px;
+    background-color: #000A66;
+    mix-blend-mode: normal;
+} 
+.navbar{
+  width: 100%;
+  height: 60px;
+}
+
+.logo-apita{
+  /** animação de aumentar **/
+  transition: .2s;
+}
+.logo-apita:hover{
+  /** animação de aumentar **/
+  transform: scale(1.2);
+}
+
+.container_noticia{
+    max-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 30px;
+    align-content: center;
+    object-fit: contain;
+    padding: 90px;
+}
+
+.sub-container-noticia{
+    display: flex;
+    align-items: center;
+    border-radius: 40px;
+    box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.18);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding: 30px;
+    flex-direction: row;
+    height: fit-content;
+    background-color: white;
+    transition: transform .2s;
+    flex-direction: row;
+    justify-content: space-around;
+  
+  } 
+  
+ 

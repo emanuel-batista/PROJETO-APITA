@@ -158,9 +158,9 @@ button{
   max-height: 100vh;
   height: 100vh;
   display: flex;
-/*    flex-flow: row wrap;
+   flex-flow: row wrap;
   justify-content: center;
-  flex-wrap: nowrap; */
+  flex-wrap: nowrap;
   align-items: center;
   padding: 30px;
   align-content: center;

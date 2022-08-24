@@ -26,6 +26,7 @@
 .mae{
   background-image: url("../images/background-apita.jpg");
   background-size: contain;
+  overflow: hidden;
 }
 #logo {
     /* IMG DA LOGO*/
@@ -56,7 +57,8 @@
   text-decoration: none;
 }
 .btn:hover{
-  background-color: rgb(151, 115, 23) !important;
+  background-color: rgb(227, 227, 227) !important;
+  border-color: rgb(227, 227, 227) !important;
 }
 .container-2{
   background-color: #527E54;
@@ -87,6 +89,15 @@ button{
     letter-spacing: 0.175em;
     /**height: 20px; */
     padding: 20px;
+    
+}
+
+#icon{
+  transition: transform .2s;
+}
+
+#icon:hover{
+  transform: scale(1.1);
 }
 /* #icon{
     height: 20px;
@@ -124,6 +135,14 @@ button{
 .btn-light{
   font-weight: bolder;
 }
+
+.btn{
+  border-radius: 20px !important;
+  text-transform: uppercase !important;
+  font-weight: bold !important;
+}
+
+
 .icon-com-foto{
   height: 50px;
   max-width: 50px;
@@ -198,7 +217,6 @@ button{
 
 }
 
-<<<<<<< HEAD
 .sub-container-2{
   display: flex;
   align-items: center;
@@ -215,23 +233,22 @@ button{
   justify-content: space-around;
 
 } 
-
+/* 
 .sub-container-2:hover{
 =======
 
 
 .sub-container:hover{
->>>>>>> 57d86f35ff72fa32fa3e5e202bc9eefce11f6811
   transform: scale(1.1);
 
-}
+} */
 
 .hero-section{
   display: flex;
   flex-direction: column;
   /* height: 100%; */
   margin: 20px;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-evenly;
   flex-wrap: nowrap;
 }
@@ -262,5 +279,99 @@ h1{
 
 .container{
 display: flex;
+}
+
+.entrevista{
+  display: flex;
+  background: white;
+  /* transition: transform .2s; */
+}
+
+.entrevista-1{
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+  z-index: 1;
+}
+
+.entrevista-1:hover{
+  transform: scale(1.04);
+  box-shadow: 0px 0px 35px 3px rgba(0,0,0,0.59);
+}
+
+.entrevista-2{
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+  z-index: 2;
+}
+
+.entrevista-2:hover{
+  transform: scale(1.04);
+  box-shadow: 0px 0px 35px 3px rgba(0,0,0,0.59);
+}
+
+.entrevista-3{
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+  z-index: 3;
+}
+
+.entrevista-3:hover{
+  transform: scale(1.04);
+  box-shadow: 0px 0px 35px 3px rgba(0,0,0,0.59);
+}
+
+
+
+.info-entrevista{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-start;
+  margin: 40px;
+  margin-left: 9vw;
+  justify-content: center;
+  width: 50vw;
+}
+
+.conteudo-entrevista{
+  display: flex;
+}
+
+.img-entrevista{
+  border-top-left-radius: 90px;
+  transition: cubic-bezier(0.165, 0.84, 0.44, 1) 0.3s;
+  /* min-height: 400px; */
+  max-height: 400px;
+  min-width: 750px;
+  object-fit: cover;
+  box-shadow: 0px 0px 35px 3px rgba(0,0,0,0.59);
+}
+
+
+
+.info-entrevista-2{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: flex-end;
+  margin: 40px;
+  margin-right: 9vw;
+  justify-content: center;
+}
+
+.conteudo-entrevista-2{
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.img-entrevista-2{
+  border-top-right-radius: 90px;
+ /*  min-height: 400px; */
+  max-height: 400px;
+  min-width: 750px;
+  object-fit: cover;
+  box-shadow: 0px 0px 35px 3px rgba(0,0,0,0.59);
+}
+
+.entrevista-2{
+  display: flex;
+  background: white;
 }
 

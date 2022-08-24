@@ -16,12 +16,12 @@
         </div>
         <div class="container container-login">
             <form action="../includes/register.php" method="post" class='form-login' enctype='multipart/form-data'>
-                <input type="text" name="nome" placeholder="Nome" class='input-login'>
-                <input type="text" name="username" placeholder="Nome de usuário" class='input-login'>
-                <input type="text" name="redesocial" placeholder="Redes sociais" class='input-login'>
-                <input type="password" name="password" placeholder="Senha" class='input-login'>
+                <input type="text" name="nome" placeholder="Nome" class='input-login' required>
+                <input type="text" name="username" placeholder="Nome de usuário" class='input-login' required>
+                <input type="text" name="redesocial" placeholder="Redes sociais" class='input-login' required>
+                <input type="password" name="password" placeholder="Senha" class='input-login' required>
                 <label for="fileToUpload">Foto de perfil:</label>
-                <input type="file" name="fileToUpload" id="fileToUpload">
+                <input type="file" name="fileToUpload" id="fileToUpload" required>
                 <div class='botoes-login'>
                     <input type="submit" name="register_btn" class='btn btn-light' value='Cadastre-se'>
                 </div>

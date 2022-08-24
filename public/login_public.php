@@ -17,8 +17,8 @@
         </div>
         <div class="container container-login">
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class='form-login'>
-                <input type="text" name="username" placeholder="Nome de usuário" class='input-login'>
-                <input type="password" name="password" placeholder="Senha" class='input-login'>
+                <input type="text" name="username" placeholder="Nome de usuário" class='input-login' required>
+                <input type="password" name="password" placeholder="Senha" class='input-login' required>
                 <div class='botoes-login'>
                     <input type="submit" name="login_btn" class='btn btn-light' value='Entrar'>
                     <a href="register_public.php" class='btn btn-warning'>Cadastre-se</a>

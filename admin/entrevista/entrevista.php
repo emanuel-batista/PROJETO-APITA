@@ -61,7 +61,9 @@
                 <div class="dropdown">
                     <a href="#" class="d-flex align-items-center link-dark text-decoration-none dropdown-toggle" id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
                         <!-- <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2"> -->
-                        <strong>Nome<!-- colocar tag de php puxando nome da pessoa em toda a tag strong --></strong>
+                        <strong><?php $username = $_SESSION['username'];
+                            echo $username;
+                        ?></strong>
                     </a>
                     <ul class="dropdown-menu text-small shadow" aria-labelledby="dropdownUser2">
                         <li><a class="dropdown-item" href="#">Perfil</a></li>
@@ -87,7 +89,7 @@
                 <tbody>
                 <?php
                     //$id = $row['id'];
-                    $sql = "SELECT id_entrevista, titulo_entrevista, link_entrevista FROM entrevista";
+                    $sql = "SELECT id_entrevista, titulo_entrevista, link_entrevista FROM entrevista ORDER BY id_entrevista DESC";
                     $result = mysqli_query($conn, $sql);
                     
                     while($row = mysqli_fetch_assoc($result)){

@@ -20,12 +20,14 @@
             $row = mysqli_fetch_assoc($result);
             //armazenar foto numa variável	
             $foto = $row['FOTO'];
+            $rede = $row['REDE_SOCIAL'];
             $data = date('d/m/Y', strtotime($row['created_at']));
             echo '<img src="../../static/images/imagens-perfil/'.$foto.'" alt="foto de perfil" class="img-fluid">';
         ?>
         <div class="informacoes">
             <h1 class="text-capitalize"><?php echo $nome ?></h1>
             <p class="text-capitalize">Entrou em: <strong><?php echo $data ?></strong></p>
+            <p class="text-capitalize">Encontre em: <strong><?php echo $rede ?></strong></p>
             <a href='usuario.php' class='btn btn-primary'>Voltar</a>
         </div>
     </div>

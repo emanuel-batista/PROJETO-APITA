@@ -81,6 +81,14 @@
             <div class="card" style="width: 170vh;">
             <!-- <button id="dd__new__list" type="button" class="btn btn-success position-absolute" data-toggle="modal" data-target=".bd-example-modal-lg"><i class="fas fa-plus"></i> Add a new List</button> -->
             <a href="adicionarnoticia.php" class='btn btn-success criar font-weight-bold'>Criar Notícia</a>
+            <?php 
+                //puxar msg da sessão
+                if(isset($_SESSION['msg'])){
+                    echo $_SESSION['msg'];
+                    unset($_SESSION['msg']);
+                }
+            
+            ?>
             <table class="table table-hover">
                 <thead>
                 <tr>

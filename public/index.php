@@ -19,6 +19,11 @@
       <?php require_once(ROOT_PATH . '/public_functions.php') ?> 
     </div> 
     <?php $posts = getPublishedPostsRecent(); 
+    //verificar se há msg em $_SESSION['msg']
+    if (isset($_SESSION['msg'])) {
+      echo $_SESSION['msg'];
+      unset($_SESSION['msg']);
+    }
     var_dump($_SESSION);
       ?> 
     <div class="container"> 

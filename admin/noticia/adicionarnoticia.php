@@ -88,9 +88,9 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="fileToUpload">Select image to upload:</label>
+                <label for="fileToUpload">Thumbnail</label><br>
                 <input type="file" name="fileToUpload" id="fileToUpload">
-            </div>
+            </div><br>
             <button type="submit" class="btn btn-success" name="enviar">Próximo</button>    
             <a href="noticia.php" class="btn btn-secondary">Voltar</a>
                 

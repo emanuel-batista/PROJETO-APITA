@@ -47,7 +47,7 @@
     $publicado = true;
     $idusuario = $_SESSION['id'];
     //pegar data e hora atual
-    $data = date('Y-m-d H:i:s');
+    $data = date('Y-m-d');
    
         
     //não deixar inserir variavel nula
@@ -88,11 +88,13 @@
 
         <?php
          if($result){
-            echo '<h1>Notícia inserida com sucesso!</h1>';
-            echo '<button><a href="noticia.php">Voltar</a></button>';
-            echo "<script>header('Location: noticia.php');</script>";
+            //criar váriavel global para mostrar mensagem de sucesso
+            $_SESSION['msg'] = "<div class='alert alert-success' role='alert'>Notícia inserida com sucesso!</div>";
+            echo "<script>window.location.href = 'noticia.php';</script>";
         }else{
             echo '<script>alert("Erro ao inserir notícia!");</script>';
+            //criar váriavel global para mostrar mensagem de erro
+            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro ao inserir notícia!</div>";
             echo '<script>window.location.href = "../noticia/noticia.php";</script>';
         }
         //header ir para página de inserção de imagem

@@ -62,7 +62,7 @@
             $row = mysqli_fetch_assoc($result);
             echo("<p>".$row['CONTEUDO_NOTICIA']."</p>");
             //echo da imagem da notícia
-            echo("<img src='../../static/images/imagens-noticia/".$row['IMG_NOTICIA']."' alt='Imagem da notícia' width='50%'><br>");
+           /*  echo("<img src='../../static/images/imagens-noticia/".$row['IMG_NOTICIA']."' alt='Imagem da notícia' width='50%'><br>"); */
             //mostrar nome do autor da notícia
             echo("<p class='criado'>Autor: ".$row['nome_usuario']."</p>");
             echo("<p class='criado'>Notícia criada em: ". $row['created_at'] . "</p>");

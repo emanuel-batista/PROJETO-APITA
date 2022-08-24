@@ -36,3 +36,19 @@ function getUserById($id){
 	$user = mysqli_fetch_assoc($result); // fetch query result as associative array
 	return $user;
 }
+
+//função selecionar as 3 entrevistas mais recentes
+function getPublishedPostsRecentEntrevista(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM entrevista ORDER BY id_entrevista DESC LIMIT 3";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$entrevistas = mysqli_fetch_all($result, MYSQLI_ASSOC);
+	//pegar 250 caracteres do conteúdo da notícia
+	$entrevistas[0]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[0]['CONTEUDO_ENTREVISTA'], 0, 500) . "...";
+	$entrevistas[1]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[1]['CONTEUDO_ENTREVISTA'], 0, 500) . "...";
+	$entrevistas[2]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[2]['CONTEUDO_ENTREVISTA'], 0, 500) . "...";
+	
+	return $entrevistas;
+}

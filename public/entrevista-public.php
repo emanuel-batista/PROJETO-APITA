@@ -24,30 +24,45 @@
                 <div class="info-entrevista">
                     <h2 style='color: #474747;'><?php echo $entrevistas[0]['TITULO_ENTREVISTA']; ?></h2>
                     <p style="color: #4E4E4E;"><?php echo $entrevistas[0]['CONTEUDO_ENTREVISTA']; ?></p>
-                    <a href="entrevista1.php" class="btn btn-warning">Ver entrevista</a>
+                    <a href="<?php 
+                        //pegar o href da entrevista
+                        $href = $entrevistas[0]['HREF'];
+                        echo $href;
+                    
+                    ?>" class="btn btn-warning">Ver entrevista</a>
                 </div>
                 <!-- <img src="../static/images/imagens-perfil/ygona-moura.jpg" alt="Imagem da entrevista" width="500px" class="img-entrevista"> -->
-                <img src= "<?php echo $entrevistas[0]["IMG_ENTREVISTA"]?>" class="img-entrevista" alt="Imagem da entrevista" width="500px">
+                <img src= "../static/images/imagens-noticia/<?php echo $entrevistas[0]["IMG_ENTREVISTA"];?>" class="img-entrevista" alt="Imagem da entrevista" width="500px">
             </div>
         </div>
         <div class="entrevista entrevista-2">
             <div class="conteudo-entrevista-2">
                 <div class="info-entrevista-2">
-                    <h2 style='color: #474747;'>Entrevista 2</h2>
-                    <p style="color: #4E4E4E; text-align: end;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quam temporibus quae repellat deserunt veritatis doloribus quisquam laudantium. Impedit eveniet laboriosam cupiditate ea nisi dicta pariatur veniam nobis voluptatibus eaque.</p>
-                    <a href="entrevista1.php" class="btn btn-warning">Ver entrevista</a>
+                    <h2 style='color: #474747;'><?php echo $entrevistas[1]['TITULO_ENTREVISTA']; ?></h2>
+                    <p style="color: #4E4E4E; text-align: end;"><?php echo $entrevistas[1]['CONTEUDO_ENTREVISTA']; ?></p>
+                    <a href='<?php 
+                        //pegar o href da entrevista
+                        $href = $entrevistas[1]['HREF'];
+                        echo $href;
+                    
+                    ?>' class="btn btn-warning">Ver entrevista</a>
                 </div>
-                <img src="../static/images/belle_bellinha.jpg" alt="Imagem da entrevista" width="500px" class="img-entrevista-2">
+                <img src="../static/images/imagens-noticia/<?php echo $entrevistas[1]["IMG_ENTREVISTA"];?>" alt="Imagem da entrevista" width="500px" class="img-entrevista-2">
             </div>
         </div>
         <div class="entrevista entrevista-3">
             <div class="conteudo-entrevista">
                 <div class="info-entrevista">
-                    <h2 style='color: #474747;'>Entrevista 3</h2>
-                    <p style="color: #4E4E4E;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, quam temporibus quae repellat deserunt veritatis doloribus quisquam laudantium. Impedit eveniet laboriosam cupiditate ea nisi dicta pariatur veniam nobis voluptatibus eaque.</p>
-                    <a href="entrevista1.php" class="btn btn-warning">Ver entrevista</a>
+                    <h2 style='color: #474747;'><?php echo $entrevistas[2]['TITULO_ENTREVISTA']; ?></h2>
+                    <p style="color: #4E4E4E;"><?php echo $entrevistas[1]['CONTEUDO_ENTREVISTA']; ?></p>
+                    <a href="<?php 
+                        //pegar o href da entrevista
+                        $href = $entrevistas[2]['HREF'];
+                        echo $href;
+                    
+                    ?>" class="btn btn-warning">Ver entrevista</a>
                 </div>
-                <img src="../static/images/tun-quiz2.jpg" alt="Imagem da entrevista" width="500px" class="img-entrevista">
+                <img src="../static/images/imagens-noticia/<?php echo $entrevistas[2]["IMG_ENTREVISTA"]?>" alt="Imagem da entrevista" width="500px" class="img-entrevista">
             </div>
         </div>
     </div>

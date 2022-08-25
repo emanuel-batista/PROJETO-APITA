@@ -19,6 +19,7 @@ $link = addslashes($_POST['link']);
 //pegar imagem
     $target_dir = "../../static/images/imagens-noticia/";
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+    $imagembb = $_FILES["fileToUpload"]["name"];
     $uploadOk = 0;
     $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
  //pegou
@@ -57,7 +58,8 @@ if(empty($titulo) || empty($conteudo) || empty($link)){
     }
 
     //inserir no banco de dados
-    $sql = "INSERT INTO entrevista (titulo_entrevista, conteudo_entrevista, link_entrevista, img_entrevista, id_usuario) VALUES ('$titulo', '$conteudo', '$link', '$target_file', '$idusuario');";
+    $sql = "INSERT INTO entrevista (titulo_entrevista, conteudo_entrevista, link_entrevista, img_entrevista, id_usuario) VALUES ('$titulo', '$conteudo', '$link', '$imagembb', '$idusuario');";
+    var_dump($sql);
         
     $result = mysqli_query($conn, $sql);
     ?>

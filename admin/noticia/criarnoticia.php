@@ -15,7 +15,7 @@
     //Deus ajuda
         $target_dir = "../../static/images/imagens-noticia/";
         $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
-        var_dump($_FILES["fileToUpload"]);
+        /* var_dump($_FILES["fileToUpload"]); */
         $imagembb = $_FILES["fileToUpload"]["name"];
         $uploadOk = 0;
         $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));

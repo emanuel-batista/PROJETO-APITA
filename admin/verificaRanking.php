@@ -1,6 +1,6 @@
 <?php
     include '../../includes/config.php';
-    
+
 
     if($_SESSION == null){
         header('Location: ../../public');

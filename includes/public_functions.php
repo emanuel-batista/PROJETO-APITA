@@ -49,6 +49,10 @@ function getPublishedPostsRecentEntrevista(){
 	$entrevistas[0]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[0]['CONTEUDO_ENTREVISTA'], 0, 500) . "...";
 	$entrevistas[1]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[1]['CONTEUDO_ENTREVISTA'], 0, 500) . "...";
 	$entrevistas[2]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[2]['CONTEUDO_ENTREVISTA'], 0, 500) . "...";
+	//pegar href com id da entrevista
+	$entrevistas[0]['HREF'] = "verentrevista.php?id=" . $entrevistas[0]['ID_ENTREVISTA'];
+	$entrevistas[1]['HREF'] = "verentrevista.php?id=" . $entrevistas[1]['ID_ENTREVISTA'];
+	$entrevistas[2]['HREF'] = "verentrevista.php?id=" . $entrevistas[2]['ID_ENTREVISTA'];
 	
 	return $entrevistas;
 }

@@ -16,7 +16,7 @@
         <div class="links">
             <a href="index.php" class='icon'><img src="../static/images/HOME.svg" alt="HOME" id='icon' style="fill: yellow;"></a>
             <a href="entrevista-public.php" class='icon'><img src="../static/images/ENTREVISTAS.svg" alt="ENTREVISTAS" id='icon'></a>
-            <a href="#" class='icon'><img src="../static/images//NOTICIAS.svg" alt="NOTICIAS" id='icon'></a>
+            <a href="vernoticia.php" class='icon'><img src="../static/images//NOTICIAS.svg" alt="NOTICIAS" id='icon'></a>
             <a href="<?php 
                 //verifica se o usuário está logado
                 if(isset($_SESSION['username'])){

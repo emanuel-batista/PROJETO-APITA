@@ -16,7 +16,7 @@
         <?php require_once(ROOT_PATH . '/navbar.php'); ?>  
         <!-- incluir public_functions --> 
         <?php require_once(ROOT_PATH . '/public_functions.php'); 
-            $entrevistas = getPublishedPostsRecentEntrevista(); 
+            $entrevistas = getPublishedPostsOldEntrevista(); 
         ?> 
         </div> 
         <div class="filtros-entrevista">
@@ -25,8 +25,8 @@
                   Filtros
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item active" href="entrevista-public.php" >Mais recentes</a></li>
-                  <li><a class="dropdown-item" href="entrevista-atg.php">Mais antigas</a></li>
+                  <li><a class="dropdown-item" href="entrevista-public.php" >Mais recentes</a></li>
+                  <li><a class="dropdown-item active" href="entrevista-atg.php">Mais antigas</a></li>
                   <li><a class="dropdown-item" href="entrevista-tds.php">Todas as Entrevistas</a></li>
                 </ul>
               </div>
@@ -38,7 +38,7 @@
                     <p style="color: #4E4E4E;"><?php echo $entrevistas[0]['CONTEUDO_ENTREVISTA']; ?></p>
                     <a href="<?php 
                         //pegar o href da entrevista
-                        $href = $entrevistas[0]['HREF'];
+                        $href = $entrevistas[0]['LINK_ENTREVISTA'];
                         echo $href;
                     
                     ?>" class="btn btn-warning">Ver entrevista</a>
@@ -47,36 +47,25 @@
                 <img src= "../static/images/imagens-noticia/<?php echo $entrevistas[0]["IMG_ENTREVISTA"];?>" class="img-entrevista" alt="Imagem da entrevista" width="500px">
             </div>
         </div>
-        <div class="entrevista entrevista-2">
-            <div class="conteudo-entrevista-2">
-                <div class="info-entrevista-2">
-                    <h2 style='color: #474747;'><?php echo $entrevistas[1]['TITULO_ENTREVISTA']; ?></h2>
-                    <p style="color: #4E4E4E; text-align: end;"><?php echo $entrevistas[1]['CONTEUDO_ENTREVISTA']; ?></p>
-                    <a href='<?php 
-                        //pegar o href da entrevista
-                        $href = $entrevistas[1]['HREF'];
-                        echo $href;
-                    
-                    ?>' class="btn btn-warning">Ver entrevista</a>
+       <?php
+            //while para pegar as entrevistas da função getPublishedPostsOldEntrevista()
+            $i = 1;
+            while($i < count($entrevistas)){
+                //echo para mostrar as entrevistas
+                echo "<div class='entrevista entrevista-2'>
+                <div class='conteudo-entrevista'>
+                    <div class='info-entrevista'>
+                        <h2 style='color: #474747;'>".$entrevistas[$i]['TITULO_ENTREVISTA']."</h2>
+                        <p style='color: #4E4E4E;'>".$entrevistas[$i]['CONTEUDO_ENTREVISTA']."</p>
+                        <a href='".$entrevistas[$i]['LINK_ENTREVISTA']."' class='btn btn-warning'>Ver entrevista</a>
+                    </div>
+                    <img src= '../static/images/imagens-noticia/".$entrevistas[$i]['IMG_ENTREVISTA']."' class='img-entrevista' alt='Imagem da entrevista' width='500px'>
                 </div>
-                <img src="../static/images/imagens-noticia/<?php echo $entrevistas[1]["IMG_ENTREVISTA"];?>" alt="Imagem da entrevista" width="500px" class="img-entrevista-2">
-            </div>
-        </div>
-        <div class="entrevista entrevista-3">
-            <div class="conteudo-entrevista">
-                <div class="info-entrevista">
-                    <h2 style='color: #474747;'><?php echo $entrevistas[2]['TITULO_ENTREVISTA']; ?></h2>
-                    <p style="color: #4E4E4E;"><?php echo $entrevistas[1]['CONTEUDO_ENTREVISTA']; ?></p>
-                    <a href="<?php 
-                        //pegar o href da entrevista
-                        $href = $entrevistas[2]['HREF'];
-                        echo $href;
-                    
-                    ?>" class="btn btn-warning">Ver entrevista</a>
-                </div>
-                <img src="../static/images/imagens-noticia/<?php echo $entrevistas[2]["IMG_ENTREVISTA"]?>" alt="Imagem da entrevista" width="500px" class="img-entrevista">
-            </div>
-        </div>
+            </div>";
+            $i++;
+            }
+
+       ?>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>

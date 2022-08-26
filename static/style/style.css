@@ -68,6 +68,7 @@
   align-content: center;
   align-items: center;
   justify-content: center;
+  box-shadow: 0px 36px 98px -20px rgba(82,126,84,1);
 }
 button{
   border-radius: 90px !important;
@@ -208,6 +209,7 @@ button{
   flex-direction: row;
   justify-content: space-around;
   z-index: 0 !important;
+  scale: 1.2;
 
 } 
 
@@ -380,4 +382,14 @@ display: flex;
   align-items: center;
   justify-content: center;
   background: white;
+}
+
+.container-3{
+  display: flex;
+    flex-direction: row;
+    height: 50vh;
+    width: 90vw;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200px;
 }

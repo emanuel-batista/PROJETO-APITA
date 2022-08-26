@@ -45,14 +45,78 @@ function getPublishedPostsRecentEntrevista(){
 	$result = mysqli_query($conn, $sql);
 	// fetch all posts as an associative array called $posts
 	$entrevistas = mysqli_fetch_all($result, MYSQLI_ASSOC);
-	//pegar 250 caracteres do conteúdo da notícia
-	$entrevistas[0]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[0]['CONTEUDO_ENTREVISTA'], 0, 500) . "...";
-	$entrevistas[1]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[1]['CONTEUDO_ENTREVISTA'], 0, 500) . "...";
-	$entrevistas[2]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[2]['CONTEUDO_ENTREVISTA'], 0, 500) . "...";
+
+	//pegar todo o conteúdo da entrevista
+	$entrevistas[0]['CONTEUDO_ENTREVISTA'] = $entrevistas[0]['CONTEUDO_ENTREVISTA'];
+	$entrevistas[1]['CONTEUDO_ENTREVISTA'] = $entrevistas[1]['CONTEUDO_ENTREVISTA'];
+	$entrevistas[2]['CONTEUDO_ENTREVISTA'] = $entrevistas[2]['CONTEUDO_ENTREVISTA'];
+
+	/* //pegar 250 caracteres do conteúdo da notícia
+	$entrevistas[0]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[0]['CONTEUDO_ENTREVISTA'], 0, 1000) . "...";
+	$entrevistas[1]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[1]['CONTEUDO_ENTREVISTA'], 0, 1000) . "...";
+	$entrevistas[2]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[2]['CONTEUDO_ENTREVISTA'], 0, 1000) . "..."; */
 	//pegar href com id da entrevista
-	$entrevistas[0]['HREF'] = "verentrevista.php?id=" . $entrevistas[0]['ID_ENTREVISTA'];
-	$entrevistas[1]['HREF'] = "verentrevista.php?id=" . $entrevistas[1]['ID_ENTREVISTA'];
-	$entrevistas[2]['HREF'] = "verentrevista.php?id=" . $entrevistas[2]['ID_ENTREVISTA'];
+	
+	return $entrevistas;
+}
+
+//função selecionar as entrevistas mais antigas
+function getPublishedPostsOldEntrevista(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM entrevista ORDER BY id_entrevista ASC";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$entrevistas = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	//pegar todo o conteúdo da entrevista
+
+	/* //pegar 250 caracteres do conteúdo da notícia
+	$entrevistas[0]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[0]['CONTEUDO_ENTREVISTA'], 0, 1000) . "...";
+	$entrevistas[1]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[1]['CONTEUDO_ENTREVISTA'], 0, 1000) . "...";
+	$entrevistas[2]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[2]['CONTEUDO_ENTREVISTA'], 0, 1000) . "..."; */
+	//pegar href com id da entrevista
+	
+	return $entrevistas;
+}
+
+
+//função selecionar todas as entrevistas
+function getPublishedPostsAllEntrevista(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM entrevista ORDER BY id_entrevista DESC";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$entrevistas = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+
+	/* //pegar 250 caracteres do conteúdo da notícia
+	$entrevistas[0]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[0]['CONTEUDO_ENTREVISTA'], 0, 1000) . "...";
+	$entrevistas[1]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[1]['CONTEUDO_ENTREVISTA'], 0, 1000) . "...";
+	$entrevistas[2]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[2]['CONTEUDO_ENTREVISTA'], 0, 1000) . "..."; */
+	//pegar href com id da entrevista
+	
+	return $entrevistas;
+}
+
+
+//função pegar primeira entrevista para colocar no index
+function getPublishedPostsFirstEntrevista(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM entrevista ORDER BY id_entrevista DESC LIMIT 1";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$entrevistas = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	//pegar todo o conteúdo da entrevista
+	$entrevistas[0]['CONTEUDO_ENTREVISTA'] = $entrevistas[0]['CONTEUDO_ENTREVISTA'];
+	/* //pegar 250 caracteres do conteúdo da notícia
+	$entrevistas[0]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[0]['CONTEUDO_ENTREVISTA'], 0, 1000) . "...";
+	$entrevistas[1]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[1]['CONTEUDO_ENTREVISTA'], 0, 1000) . "...";
+	$entrevistas[2]['CONTEUDO_ENTREVISTA'] = substr($entrevistas[2]['CONTEUDO_ENTREVISTA'], 0, 1000) . "..."; */
+	//pegar href com id da entrevista
 	
 	return $entrevistas;
 }

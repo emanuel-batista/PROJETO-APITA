@@ -18,6 +18,7 @@
       <!-- incluir public_functions --> 
       <?php require_once(ROOT_PATH . '/public_functions.php') ?> 
     </div> 
+
      <div class="filtros-entrevista2">
             <div class="dropdown">
                 <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -30,9 +31,10 @@
                 </ul>
               </div>
         </div> 
-    <div class="container-3">
+        <div class="container-4">
 
 </div>
+
     <div class="container-noticia">
     <div class="sub-container-noticia">
         <img src= "../static/images/belle_bellinha.jpg" class="img-fluid" alt="..." class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>

@@ -113,7 +113,7 @@ button{
     align-items: stretch;
     width: 50vh;
     padding: 20px;
-    height: 40vh;
+    height: 50vh;
     justify-content: space-evenly;
     border-radius: 20px;
     margin: 10px;
@@ -123,6 +123,14 @@ button{
   flex-direction: row;
   justify-content: space-around;
 }
+
+label{
+  color: white;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+
 .input-login{
   border-top: none;
   border-left: none;
@@ -393,4 +401,8 @@ display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 200px;
+}
+
+.container-perfil{
+  display: flex;
 }

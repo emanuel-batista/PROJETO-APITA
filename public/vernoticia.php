@@ -23,8 +23,7 @@
 <div class="container-4">
   <h1>OI</h1>
   </div>
-    <div class="container-noticia">
-    <div class="filtros-entrevista2">
+  <div class="filtros-entrevista2">
       <div class="dropdown">
         <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Categorias
@@ -39,6 +38,8 @@
         </ul>
       </div>
     </div>
+    <div class="container-noticia">
+    
     <div class="aaaa">
       <?php 
         //while com echo das últimas 4 notícias
@@ -57,7 +58,7 @@
           echo "<div class='hero-section'>";
           echo '<h1 class="h1-hero"><strong>'. $titulo .'</strong></h1>';
           echo '<p class="p-hero">'. $row['CATEGORIA_NOTICIA'] .'</p>';
-          echo '<a href="vernoticia.php?noticia-salva='. $row['ID_NOTICIA'] .'" class="btn btn-warning">Ler mais</a>';
+          echo '<a href="vernoticia.php?vernoticiaclick.php?id='. $row['ID_NOTICIA'] .'" class="btn btn-warning">Ler mais</a>';
           echo '</div>';
           echo '</img>';
           echo '</div>';

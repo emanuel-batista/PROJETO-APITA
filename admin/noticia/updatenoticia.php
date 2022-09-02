@@ -12,30 +12,49 @@
     <?php
         $id = $_POST['id'];
         $titulo = $_POST['titulo'];
+        $chamada = $_POST['chamada'];
         $texto = $_POST['conteudo'];
+    //colocar mysql_escape_string para apóstrofes e aspas simples
+        function mysql_escape_mimic($inp) {
+            if(is_array($inp))
+                return array_map(__METHOD__, $inp);
+        
+            if(!empty($inp) && is_string($inp)) {
+                return str_replace(array('\\', "\0", "\n", "\r", "'", '"', "\x1a"), array('\\\\', '\\0', '\\n', '\\r', "\\'", '\\"', '\\Z'), $inp);
+            }
+        
+            return $inp;
+        }
+
+        $conteudo_esc = mysql_escape_mimic($texto);
         $categoria = $_POST['categoria'];
         if(isset($_POST['delete'])){
             //apagar notícia
             $sql = "DELETE FROM noticia WHERE id_noticia = $id";
             $result = mysqli_query($conn, $sql);
             if($result){
-                echo '<script>alert("Notícia apagada com sucesso!");</script>';
-                echo '<script>window.location.href = "../noticia/noticia.php";</script>';
+                //criar variavel de sessão para mostrar mensagem de sucesso
+                $_SESSION['msg'] = "<div class='alert alert-success' role='alert'>Notícia apagada com sucesso!</div>";
+                header("Location: noticia.php");
             }else{
-                echo '<script>alert("Erro ao apagar notícia");</script>';
-                echo '<script>window.location.href = "../noticia/noticia.php";</script>';
+                //criar variavel de sessão para mostrar mensagem de erro
+                $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro ao apagar notícia!</div>";
+                header("Location: noticia.php");
             }
         }
         else{
-        $sql = "UPDATE noticia SET titulo_noticia = '$titulo', conteudo_noticia = '$texto', categoria_noticia = '$categoria' WHERE id_noticia = $id";
+        $sql = "UPDATE noticia SET titulo_noticia = '$titulo', conteudo_noticia = '$conteudo_esc', categoria_noticia = '$categoria', chamada_noticia = '$chamada' WHERE id_noticia = $id";
         echo $sql;
         $result = mysqli_query($conn, $sql);
         if($result){
-            echo "'<script>alert('Notícia atualizada com sucesso!');</script>'";
-            echo '<script>window.location.href = "../noticia/noticia.php";</script>';
+            //criar váriavel global para mostrar mensagem de sucesso
+            $_SESSION['msg'] = "<div class='alert alert-success' role='alert'>Notícia atualizada com sucesso!</div>";
+            echo "<script>window.location.href = 'noticia.php';</script>";
+
         }else{
-            echo "<h1>Erro ao atualizar notícia!</h1>";
-            echo "<a href='noticia.php' class='btn btn-primary'>Voltar</a>";
+            //criar váriavel global para mostrar mensagem de erro
+            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro ao atualizar notícia!</div>";
+            echo "<script>window.location.href = 'noticia.php';</script>";
     }
 }
     ?>

@@ -56,11 +56,12 @@
     $id = $_GET['id'];
     $nome = $_GET['nome'];
     //pegar conteudo da notícia com base no id
-    $sql = "SELECT id_noticia, titulo_noticia, conteudo_noticia, categoria_noticia FROM noticia WHERE id_noticia = $id";
+    $sql = "SELECT id_noticia, titulo_noticia, conteudo_noticia, categoria_noticia, chamada_noticia FROM noticia WHERE id_noticia = $id";
     $result = mysqli_query($conn, $sql);
     $row = mysqli_fetch_assoc($result);
     $id = $row['id_noticia'];
     $titulo = $row['titulo_noticia'];
+    $chamada = $row['chamada_noticia'];
     $conteudo = $row['conteudo_noticia'];
     $categoria = $row['categoria_noticia'];
 
@@ -73,7 +74,7 @@
 <body>
     <div class='pai'>
         <div class='containerr'>
-            <form action="updatenoticia.php" method="post">
+            <form action="updatenoticia.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
                     <label for="titulo">ID</label>
                     <input type="text" class="form-control" id="id" name="id" placeholder="Título" value='<?php echo $id; ?>' readonly>
@@ -83,13 +84,22 @@
                     <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título" value='<?php echo $titulo; ?>'>
                 </div>    
                 <div class="form-group">
+                    <label for="titulo">Chamada</label>
+                    <input type="text" class="form-control" id="chamada" name="chamada" placeholder="Chamada" value='<?php echo $chamada; ?>'>
+                </div>    
+                <div class="form-group">
                     <label for="conteudo">Conteúdo</label>
                     <textarea class="form-control" id="conteudo" name="conteudo" rows="3"><?php echo $conteudo; ?></textarea>
                 </div>
                 <div class="form-group">
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                </div>
+                
+                <div class="form-group">
                     <label for="categoria">Categoria</label>
                     <input type="text" class="form-control" id="categoria" name="categoria" placeholder="Categoria" value='<?php echo $categoria; ?>'>
                 </div>
+
                 <button type="submit" value="update" class="btn btn-success">Enviar</button>    
                 <button type="submit" value="delete" name="delete" class="btn btn-danger">Apagar</button>
                 <a href="noticia.php" class="btn btn-secondary">Voltar</a>

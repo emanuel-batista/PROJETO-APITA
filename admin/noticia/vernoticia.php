@@ -61,6 +61,7 @@
         $result = mysqli_query($conn, $sql);
         if($result){
             $row = mysqli_fetch_assoc($result);
+            echo("<h6>".$row['CHAMADA_NOTICIA']."</h6>");
             echo("<p>".$row['CONTEUDO_NOTICIA']."</p>");
             //echo da imagem da notícia
            /*  echo("<img src='../../static/images/imagens-noticia/".$row['IMG_NOTICIA']."' alt='Imagem da notícia' width='50%'><br>"); */

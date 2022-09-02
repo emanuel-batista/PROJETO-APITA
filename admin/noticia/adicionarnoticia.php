@@ -45,18 +45,28 @@
             align-items: center;
         }
 
+        .form-group{
+            margin: 10px;
+        }
+
         body{
-            background-color: #000A66;
+            background-color: whitesmoke;
         }
 
         .tox{
             width: 95vw !important;
-            height: 40vh !important;
+            height: 50vh !important;
         }
 
         textarea{
             width: 95vw !important;
             height: 50vh !important;
+        }
+
+        label{
+            font-family: 'Roboto', sans-serif ;
+            font-weight: lighter;
+            color: black;
         }
     </style>
     <?php include_once '../verificaRanking.php'; ?>
@@ -65,26 +75,22 @@
     <div class='container'>
         <form action="criarnoticia.php" method="post" enctype="multipart/form-data">
             <div class="form-group">
-                <label for="titulo">Título</label>
                 <input type="text" class="form-control" id="titulo" name="titulo" placeholder="Título">
             </div>    
             <div class="form-group">
-                <label for="titulo">Chamada</label>
                 <input type="text" class="form-control" id="chamada" name="chamada" placeholder="Chamada">
             </div>    
             <!-- <div class="form-group"> -->
-                <label for="conteudo">Conteúdo</label>
                 <textarea class="form-control" id="myTextarea" name="conteudo">Oiii</textarea>
             <!-- </div> -->
             <div class="form-group">
-                <label for="categoria">Categoria</label>
                 <select class="form-control" aria-label="categoria" name='categoria'>
                     <option selected>Escolha uma categoria:</option>
-                    <option value="volei">Vôlei</option>
-                    <option value="futebol">Futebol</option>
-                    <option value="basquete">Basquete</option>
-                    <option value="copa">Copa</option>
-                    <option value="olimpiadas">Olimpíadas</option>
+                    <option value="Vôlei">Vôlei</option>
+                    <option value="Futebol">Futebol</option>
+                    <option value="Basquete">Basquete</option>
+                    <option value="Copa">Copa</option>
+                    <option value="Olimpíadas">Olimpíadas</option>
                 </select>
             </div>
             <div class="form-group">

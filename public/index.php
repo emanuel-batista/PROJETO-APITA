@@ -34,7 +34,7 @@
         <div class="hero-section">
           <h1 class="h1-hero"><strong><?php echo $posts[0]['TITULO_NOTICIA']; ?></strong></h1>
           <p class="p-hero"><?php echo $posts[0]['CHAMADA_NOTICIA']; ?></p>
-          <button class='btn btn-warning'><a href="vernoticiaclick.php?<?php echo $posts[0]['ID_NOTICIA']; ?>" class='ver-mais-hero'>Ver Mais</a></button>
+          <button class='btn btn-warning'><a href="vernoticiaclick.php?id=<?php echo $posts[0]['ID_NOTICIA']; ?>" class='ver-mais-hero'>Ver Mais</a></button>
         </div>
         </img> 
       </div>
@@ -45,7 +45,7 @@
     
     <div class="text-2">
       <h2 class='h2-2'><strong><?php
-      echo $posts[0]['TITULO_NOTICIA']; ?></strong></h2>
+      echo $entrevistas[0]['TITULO_ENTREVISTA']; ?></strong></h2>
       </strong></h2>
       <button class='btn btn-warning'><a href="entrevista-public.php" class='ver-mais-hero'>Ver Mais</a></button>
     </div>

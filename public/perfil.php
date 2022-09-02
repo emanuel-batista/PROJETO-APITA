@@ -18,19 +18,21 @@
    
     <div class="container-perfil">
         <form action="../includes/logout.php" method="post">
-            <input type="submit" name="logout_btn" value="Sair">
+            <input type="submit" name="logout_btn" value="Sair" class="btn btn-waning">
         </form>
     </div>
 
     <?php
-        require_once(ROOT_PATH . '/public_functions.php');
+       include(ROOT_PATH . '/public_functions.php');
+        var_dump($_SESSION);
 
         $user = getLoggedUser();
-        $id = $user['id'];
-        $nome = $user['nome'];
-        $foto = $user['foto'];
-        $rede = $user['rede_social'];
+        $id = $user['ID_USUARIO'];
+        $nome = $user['NOME'];
+        $foto = $user['FOTO'];
+        $rede = $user['REDE_SOCIAL'];
         $data = date('d/m/Y', strtotime($user['created_at']));
+        
 
     ?>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

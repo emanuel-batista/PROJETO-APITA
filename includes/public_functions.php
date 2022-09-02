@@ -126,8 +126,9 @@ function getLoggedUser(){
 	// use global $conn object in function
 	global $conn;
 	//pegar id do usuário logado
-	$id = $_SESSION['username']['id'];
-	$sql = "SELECT * FROM users WHERE id=$id LIMIT 1";
+	$id = $_SESSION['id'];
+	
+	$sql = "SELECT * FROM usuario WHERE id_usuario=$id LIMIT 1";
 	$result = mysqli_query($conn, $sql);
 	$user = mysqli_fetch_assoc($result); // fetch query result as associative array
 	return $user;

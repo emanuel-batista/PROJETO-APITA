@@ -21,8 +21,11 @@ function getPublishedPostsRecent(){
 	$result = mysqli_query($conn, $sql);
 	// fetch all posts as an associative array called $posts
 	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
+	//pegar só o primeiro parágrafo
+	$posts[0]['CONTEUDO_NOTICIA'] = substr($posts[0]['CONTEUDO_NOTICIA'], 0, 700) . '...';
+
 	//pegar 250 caracteres do conteúdo da notícia
-	$posts[0]['CONTEUDO_NOTICIA'] = substr($posts[0]['CONTEUDO_NOTICIA'], 0, 250) . "...";
+/* 	$posts[0]['CONTEUDO_NOTICIA'] = substr($posts[0]['CONTEUDO_NOTICIA'], 0, 250) . "..."; */
 	
 	return $posts;
 }
@@ -132,4 +135,24 @@ function getLoggedUser(){
 	$result = mysqli_query($conn, $sql);
 	$user = mysqli_fetch_assoc($result); // fetch query result as associative array
 	return $user;
+}
+
+//pegar a última notícia
+function getPublishedPostsLastNoticia(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM noticia ORDER BY id_noticia DESC LIMIT 1";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$noticias = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	//pegar todo o conteúdo da notícia
+	$noticias[0]['CONTEUDO_NOTICIA'] = $noticias[0]['CONTEUDO_NOTICIA'];
+	/* //pegar 250 caracteres do conteúdo da notícia
+	$noticias[0]['CONTEUDO_NOTICIA'] = substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 1000) . "...";
+	$noticias[1]['CONTEUDO_NOTICIA'] = substr($noticias[1]['CONTEUDO_NOTICIA'], 0, 1000) . "...";
+	$noticias[2]['CONTEUDO_NOTICIA'] = substr($noticias[2]['CONTEUDO_NOTICIA'], 0, 1000) . "..."; */
+	//pegar href com id da notícia
+	
+	return $noticias;
 }

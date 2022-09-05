@@ -16,13 +16,21 @@
     <div class="navbar"> 
       <?php require_once(ROOT_PATH . '/navbar.php'); ?>  
       <!-- incluir public_functions --> 
-      <?php require_once(ROOT_PATH . '/public_functions.php') ?> 
+      <?php require_once(ROOT_PATH . '/public_functions.php');
+        $posts = getPublishedPostsRecent();
+      ?> 
+  
     </div> 
 
     
 <div class="container-4">
-  <h1>OI</h1>
+  <div class="sub-container-4">
+    <h1 class="h1-vn"><?php echo $posts[0]['TITULO_NOTICIA'] ?></h1>
+    <p class="p-vn"><?php echo $posts[0]['CONTEUDO_NOTICIA'] ?></p>
   </div>
+  <?php echo "<img src='../static/images/imagens-noticia/". $posts[0]['IMG_NOTICIA'] . "' class='img-fluid' alt='...' class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>"; ?>
+
+</div>
   <div class="filtros-entrevista2">
       <div class="dropdown">
         <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
@@ -58,7 +66,7 @@
           echo "<div class='hero-section'>";
           echo '<h1 class="h1-hero"><strong>'. $titulo .'</strong></h1>';
           echo '<p class="p-hero">'. $row['CATEGORIA_NOTICIA'] .'</p>';
-          echo '<a href="vernoticia.php?vernoticiaclick.php?id='. $row['ID_NOTICIA'] .'" class="btn btn-warning">Ler mais</a>';
+          echo '<a href="vernoticiaclick.php?id='. $row['ID_NOTICIA'] .'" class="btn btn-warning">Ler mais</a>';
           echo '</div>';
           echo '</img>';
           echo '</div>';

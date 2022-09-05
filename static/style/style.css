@@ -30,6 +30,11 @@
   background-size: contain;
   overflow: hidden;
 }
+
+.h2-2{
+  text-transform: uppercase;
+}
+
 #logo {
     /* IMG DA LOGO*/
     height: 60px;

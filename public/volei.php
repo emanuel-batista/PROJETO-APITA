@@ -17,6 +17,7 @@
       <?php require_once(ROOT_PATH . '/navbar.php'); ?>  
       <!-- incluir public_functions --> 
       <?php require_once(ROOT_PATH . '/public_functions.php');
+        $noticias = getPublishedPostsCategoria1();
         $posts = getPublishedPostsRecent();
       ?> 
   
@@ -25,14 +26,14 @@
     
 <div class="container-4">
   <div class="sub-container-4">
-    <h1 class="h1-vn"><?php echo $posts[0]['TITULO_NOTICIA'] ?></h1>
-    <p class="p-vn"><?php echo $posts[0]['CONTEUDO_NOTICIA'] ?></p>
+    <h1 class="h1-vn"><?php echo $noticias[0]['TITULO_NOTICIA'] ?></h1>
+    <p class="p-vn"><?php echo $noticias[0]['CONTEUDO_NOTICIA'] ?></p>
   </div>
-  <?php echo "<img src='../static/images/imagens-noticia/". $posts[0]['IMG_NOTICIA'] . "' class='img-fluid' alt='...' class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>"; ?>
-
+  <?php echo "<img src='../static/images/imagens-noticia/". $noticias[0]['IMG_NOTICIA'] . "' class='img-fluid' alt='...' class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>"; ?>
 </div>
-  <div class="filtros-entrevista2">
-      <div class="dropdown">
+    </div>
+<div class="filtros-entrevista2">
+    <div class="dropdown">
         <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Categorias
         </button>
@@ -46,12 +47,11 @@
         </ul>
       </div>
     </div>
-    <div class="container-noticia">
-    
+<div class="container-noticia-2">    
     <div class="aaaa">
       <?php 
         //while com echo das últimas 4 notícias
-        $sql = "SELECT * FROM noticia ORDER BY id_noticia DESC LIMIT 4";
+        $sql = "SELECT * FROM noticia WHERE categoria_noticia=1 ORDER BY id_noticia DESC";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
           //se o título for maior que 50 caracteres, ele corta e coloca 3 pontos
@@ -61,7 +61,7 @@
             $titulo = $row['TITULO_NOTICIA'];
           }
 
-          echo '<div class="sub-container-noticia">';
+          echo '<div class="sub-container-noticia-2">';
           echo "<img src='../static/images/imagens-noticia/". $row['IMG_NOTICIA'] . "' class='img-fluid' alt='...' class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>";
           echo "<div class='hero-section'>";
           echo '<h1 class="h1-hero"><strong>'. $titulo .'</strong></h1>';
@@ -74,6 +74,15 @@
         }
       ?> 
     </div>
+    <!-- <div class="sub-container-noticia">
+        <img src= "../static/images/belle_bellinha.jpg" class="img-fluid" alt="..." class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>
+        <div class="hero-section">
+             <h1 class="h1-hero"><strong></strong></h1>
+          <p class="p-hero">Belle belinha avisa que vem aí!</p>  
+          <button class='btn btn-warning'><a href="vernoticia.php" class='ver-mais-hero'>Ver Mais</a></button>
+        </div>
+      </img> 
+    </div>  --> 
   </div>
 </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>

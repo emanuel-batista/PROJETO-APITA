@@ -161,7 +161,7 @@ function getPublishedPostsLastNoticia(){
 function getPublishedPostsCategoria1(){
 	// use global $conn object in function
 	global $conn;
-	$sql = "SELECT * FROM noticia WHERE categoria_noticia=1 ORDER BY id_noticia";
+	$sql = "SELECT * FROM noticia WHERE categoria_noticia=1 ORDER BY created_at desc limit 1;";
 	$result = mysqli_query($conn, $sql);
 	// fetch all posts as an associative array called $posts
 	$noticias = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -172,3 +172,6 @@ function getPublishedPostsCategoria1(){
 	
 	return $noticias;
 }
+
+//função adicionar curtida na notícia com o id do usuário
+

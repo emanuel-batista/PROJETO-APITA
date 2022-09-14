@@ -172,11 +172,22 @@ a:hover{
   display: flex;
   align-items: center;
   flex-direction: column;
-  /* height: 100vh; */
+  height: 100vh;
   flex-wrap: wrap;
   width: 100vw;
   align-content: center;
   justify-content: space-evenly;
+}
+
+.sub-container-n2{
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  /* height: 100vh; */
+  flex-wrap: wrap;
+  width: 100vw;
+  align-content: center;
+  justify-content: center;
 }
  
 

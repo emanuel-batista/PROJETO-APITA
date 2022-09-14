@@ -23,6 +23,7 @@ function getPublishedPostsRecent(){
 	$posts = mysqli_fetch_all($result, MYSQLI_ASSOC);
 	//pegar só o primeiro parágrafo
 	$posts[0]['CONTEUDO_NOTICIA'] = substr($posts[0]['CONTEUDO_NOTICIA'], 0, 700) . '...';
+	$posts[0]['CONTEUDO_NOTICIA'] = strstr($posts[0]['CONTEUDO_NOTICIA'], '<img', true) ?: substr($posts[0]['CONTEUDO_NOTICIA'], 0, 500) . "...";
 
 	//pegar 250 caracteres do conteúdo da notícia
 /* 	$posts[0]['CONTEUDO_NOTICIA'] = substr($posts[0]['CONTEUDO_NOTICIA'], 0, 250) . "..."; */
@@ -167,11 +168,77 @@ function getPublishedPostsCategoria1(){
 	$noticias = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 	/* //pegar 250 caracteres do conteúdo da notícia */
-	$noticias[0]['CONTEUDO_NOTICIA'] = substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 500) . "...";
+	$noticias[0]['CONTEUDO_NOTICIA'] = strstr($noticias[0]['CONTEUDO_NOTICIA'], '<img', true) ?: substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 500) . "...";
 	//pegar href com id da notícia
 	
 	return $noticias;
 }
 
-//função adicionar curtida na notícia com o id do usuário
+//pegar notícias de categoria 2
+function getPublishedPostsCategoria2(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM noticia WHERE categoria_noticia=2 ORDER BY created_at desc limit 1;";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$noticias = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
+	/* //pegar 250 caracteres do conteúdo da notícia */
+	$noticias[0]['CONTEUDO_NOTICIA'] = substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 500) . "...";
+	//se tiver tag img, não mostrar o resto do conteúdo depois da tag img
+	$noticias[0]['CONTEUDO_NOTICIA'] = strstr($noticias[0]['CONTEUDO_NOTICIA'], '<img', true) ?: substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 500) . "...";
+
+	
+	
+	//pegar href com id da notícia
+	
+	return $noticias;
+}
+
+//pegar notícias de categoria 3
+function getPublishedPostsCategoria3(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM noticia WHERE categoria_noticia=3 ORDER BY created_at desc limit 1;";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$noticias = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	/* //pegar 250 caracteres do conteúdo da notícia */
+	/* 	$noticias[0]['CONTEUDO_NOTICIA'] = substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 500) . "..."; */
+	$noticias[0]['CONTEUDO_NOTICIA'] = strstr($noticias[0]['CONTEUDO_NOTICIA'], '<img', true) ?: substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 500) . "...";
+	
+	return $noticias;
+}
+
+//pegar notícias de categoria 4
+function getPublishedPostsCategoria4(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM noticia WHERE categoria_noticia=4 ORDER BY created_at desc limit 1;";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$noticias = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	/* //pegar 250 caracteres do conteúdo da notícia */
+	//se tiver tag img, não mostrar o resto do conteúdo depois da tag img, caso contrário, mostrar 500 caracteres
+	$noticias[0]['CONTEUDO_NOTICIA'] = strstr($noticias[0]['CONTEUDO_NOTICIA'], '<img', true) ?: substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 500) . "...";
+	//pegar href com id da notícia
+	
+	return $noticias;
+}
+//pegar notícias de categoria 5
+function getPublishedPostsCategoria5(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM noticia WHERE categoria_noticia=5 ORDER BY created_at desc limit 1;";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$noticias = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	/* //pegar 250 caracteres do conteúdo da notícia */
+	$noticias[0]['CONTEUDO_NOTICIA'] = strstr($noticias[0]['CONTEUDO_NOTICIA'], '<img', true) ?: substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 500) . "...";
+	//pegar href com id da notícia
+	
+	return $noticias;
+}

@@ -27,7 +27,7 @@
       <?php require_once(ROOT_PATH . '/navbar.php'); ?>  
       <!-- incluir public_functions --> 
       <?php require_once(ROOT_PATH . '/public_functions.php');
-        $noticias = getPublishedPostsCategoria1(); 
+        $noticias = getPublishedPostsCategoria5(); 
       ?> 
   
     </div> 
@@ -47,11 +47,11 @@
         </button>
         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
           <li><a class="dropdown-item" href="vernoticia.php">Principais</a></li>
-          <li><a class="dropdown-item active" href="volei.php">Vôlei</a></li>
+          <li><a class="dropdown-item" href="volei.php">Vôlei</a></li>
           <li><a class="dropdown-item" href="futebol.php">Futebol</a></li>
           <li><a class="dropdown-item" href="basquete.php">Basquete</a></li>
           <li><a class="dropdown-item" href="copa.php">Copa</a></li>
-          <li><a class="dropdown-item" href="olimpiadas.php">Olimpíadas</a></li>
+          <li><a class="dropdown-item active" href="olimpiadas.php">Olimpíadas</a></li>
         </ul>
       </div>
     </div>
@@ -59,7 +59,7 @@
     <div class="sub-container-n2">
       <?php 
         //while com echo das últimas 4 notícias
-        $sql = "SELECT * FROM noticia WHERE categoria_noticia=1 order by created_at desc;";
+        $sql = "SELECT * FROM noticia WHERE categoria_noticia=5 order by created_at desc;";
 
         //a cada dois posts, fecha a div e abre outra
         $i = 1;

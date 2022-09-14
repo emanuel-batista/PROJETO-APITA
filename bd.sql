@@ -8,8 +8,10 @@ create table usuario(
     SENHA varchar(15) not null,
     RANKING tinyint(1) not null default(2),
     FOTO varchar(100),
-    created_at timestamp
-
+    created_at timestamp,
+    REDE_SOCIAL varchar(200),
+    BIO_USUARIO varchar(500),
+    ESPORTE_USUARIO varchar(50)
 );
 
 create table noticia(
@@ -21,7 +23,10 @@ create table noticia(
     PUBLICADO_NOTICIA boolean,
     created_at timestamp,
     id_usuario int(11) not null,
-	foreign key (id_usuario) references usuario(id_usuario)
+	foreign key (id_usuario) references usuario(id_usuario),
+    nome_usuario varchar(250) not null,
+    CHAMADA_NOTICIA varchar(500),
+    update_at date
 );
 
 create table entrevista(
@@ -30,7 +35,9 @@ create table entrevista(
     LINK_ENTREVISTA varchar(45) not null,
 	IMG_ENTREVISTA varchar(100) not null,
     ID_USUARIO int(11),
-    foreign key (id_usuario) references usuario(id_usuario)
+    foreign key (id_usuario) references usuario(id_usuario),
+    CONTEUDO_ENTREVISTA varchar(500) not null,
+    nome_usuario varchar(250) not null
 );
 
 create table comentario(

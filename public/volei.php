@@ -10,6 +10,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notícias</title>
+    <style>
+      .aaaa {
+        display: flex;
+        flex-flow: wrap;
+      }
+
+      .aaaa hr {
+        width: 100%;
+      }
+    </style>
 </head>
 <body>
     <div class="mae2">
@@ -17,7 +27,7 @@
       <?php require_once(ROOT_PATH . '/navbar.php'); ?>  
       <!-- incluir public_functions --> 
       <?php require_once(ROOT_PATH . '/public_functions.php');
-        $posts = getPublishedPostsRecent();
+        $noticias = getPublishedPostsCategoria1(); 
       ?> 
   
     </div> 
@@ -25,14 +35,13 @@
     
 <div class="container-4">
   <div class="sub-container-4">
-    <h1 class="h1-vn"><?php echo $posts[0]['TITULO_NOTICIA'] ?></h1>
-    <p class="p-vn"><?php echo $posts[0]['CONTEUDO_NOTICIA'] ?></p>
+    <h1 class="h1-vn"><?php echo $noticias[0]['TITULO_NOTICIA'] ?></h1>
+    <p class="p-vn"><?php echo $noticias[0]['CONTEUDO_NOTICIA'] ?></p>
   </div>
-  <?php echo "<img src='../static/images/imagens-noticia/". $posts[0]['IMG_NOTICIA'] . "' class='img-fluid' alt='...' class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>"; ?>
-
-</div>
-  <div class="filtros-entrevista2">
-      <div class="dropdown">
+  <?php echo "<img src='../static/images/imagens-noticia/". $noticias[0]['IMG_NOTICIA'] . "' class='img-fluid' alt='...' class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>"; ?>
+</div>   
+<div class="filtros-entrevista2">
+    <div class="dropdown">
         <button class="btn btn-warning dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Categorias
         </button>
@@ -46,31 +55,39 @@
         </ul>
       </div>
     </div>
-    <div class="container-noticia">
-    
+<div class="container-noticia-2">    
     <div class="aaaa">
       <?php 
         //while com echo das últimas 4 notícias
-        $sql = "SELECT * FROM noticia ORDER BY id_noticia DESC LIMIT 4";
+        $sql = "SELECT * FROM noticia WHERE categoria_noticia=1 order by created_at desc;";
+
+        //a cada dois posts, fecha a div e abre outra
+        $i = 1;
+        $geraRow = true;
+        $contaElementos = 0;
         $result = mysqli_query($conn, $sql);
-        while ($row = mysqli_fetch_assoc($result)) {
+        while($row = mysqli_fetch_assoc($result)) {
           //se o título for maior que 50 caracteres, ele corta e coloca 3 pontos
           if (strlen($row['TITULO_NOTICIA']) > 50) {
             $titulo = substr($row['TITULO_NOTICIA'], 0, 50) . '...';
           } else {
             $titulo = $row['TITULO_NOTICIA'];
           }
-
-          echo '<div class="sub-container-noticia">';
+          
+          echo '<div class="sub-container-noticia-2">';
           echo "<img src='../static/images/imagens-noticia/". $row['IMG_NOTICIA'] . "' class='img-fluid' alt='...' class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>";
           echo "<div class='hero-section'>";
-          echo '<h1 class="h1-hero"><strong>'. $titulo .'</strong></h1>';
+          echo '<h1 class="h1-hero"><strong>' . $titulo .'</strong></h1>';
           echo '<p class="p-hero">'. $row['CATEGORIA_NOTICIA'] .'</p>';
           echo '<a href="vernoticiaclick.php?id='. $row['ID_NOTICIA'] .'" class="btn btn-warning">Ler mais</a>';
           echo '</div>';
           echo '</img>';
           echo '</div>';
 
+          if($i % 2 == 0 && $i > 0){
+              echo "<hr>";
+          }
+          $i++;
         }
       ?> 
     </div>

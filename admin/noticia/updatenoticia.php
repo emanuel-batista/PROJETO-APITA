@@ -43,7 +43,7 @@
             }
         }
         else{
-        $sql = "UPDATE noticia SET titulo_noticia = '$titulo', conteudo_noticia = '$conteudo_esc', categoria_noticia = '$categoria', chamada_noticia = '$chamada' WHERE id_noticia = $id";
+        $sql = "UPDATE noticia SET titulo_noticia = '$titulo', conteudo_noticia = '$conteudo_esc', categoria_noticia = '$categoria', chamada_noticia = '$chamada', updated_at = now() WHERE id_noticia = $id";
         echo $sql;
         $result = mysqli_query($conn, $sql);
         if($result){

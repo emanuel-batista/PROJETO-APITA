@@ -156,3 +156,22 @@ function getPublishedPostsLastNoticia(){
 	
 	return $noticias;
 }
+
+//pegar notícias de categoria 1
+function getPublishedPostsCategoria1(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM noticia WHERE categoria_noticia=1 ORDER BY created_at desc limit 1;";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$noticias = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	/* //pegar 250 caracteres do conteúdo da notícia */
+	$noticias[0]['CONTEUDO_NOTICIA'] = substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 500) . "...";
+	//pegar href com id da notícia
+	
+	return $noticias;
+}
+
+//função adicionar curtida na notícia com o id do usuário
+

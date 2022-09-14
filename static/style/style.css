@@ -28,7 +28,7 @@
 .mae{
   background-image: url("../images/background-apita.jpg");
   background-size: contain;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .h2-2{

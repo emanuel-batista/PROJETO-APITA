@@ -86,11 +86,11 @@
             <div class="form-group">
                 <select class="form-control" aria-label="categoria" name='categoria'>
                     <option selected>Escolha uma categoria:</option>
-                    <option value="Vôlei">Vôlei</option>
-                    <option value="Futebol">Futebol</option>
-                    <option value="Basquete">Basquete</option>
-                    <option value="Copa">Copa</option>
-                    <option value="Olimpíadas">Olimpíadas</option>
+                    <option value="1">Vôlei</option>
+                    <option value="2">Futebol</option>
+                    <option value="3">Basquete</option>
+                    <option value="4">Copa</option>
+                    <option value="5">Olimpíadas</option>
                 </select>
             </div>
             <div class="form-group">

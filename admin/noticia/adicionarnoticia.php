@@ -81,7 +81,7 @@
                 <input type="text" class="form-control" id="chamada" name="chamada" placeholder="Chamada">
             </div>    
             <!-- <div class="form-group"> -->
-                <textarea class="form-control" id="myTextarea" name="conteudo">Oiii</textarea>
+                <textarea class="form-control" id="myTextarea" name="conteudo"></textarea>
             <!-- </div> -->
             <div class="form-group">
                 <select class="form-control" aria-label="categoria" name='categoria'>

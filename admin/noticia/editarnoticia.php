@@ -9,7 +9,7 @@
     ?>
     <style>
         body{
-            background-color: #000A66;
+            background-color: whitesmoke;
         }
         .pai{
             width: 100vh;
@@ -22,7 +22,7 @@
         }
 
         .containerr{
-            width: 70vh;
+            width: 80vh;
             /* height: 70vh; */
             flex: auto;
             display: flex;
@@ -38,8 +38,7 @@
 
         form{
             margin: 42px;
-            color: white;
-            box-shadow: 0px 0px 10px #000A66;
+            color: black;
         }
 
         .form-group{
@@ -90,9 +89,6 @@
                 <div class="form-group">
                     <label for="conteudo">Conteúdo</label>
                     <textarea class="form-control" id="conteudo" name="conteudo" rows="3"><?php echo $conteudo; ?></textarea>
-                </div>
-                <div class="form-group">
-                    <input type="file" name="fileToUpload" id="fileToUpload">
                 </div>
                 
                 <div class="form-group">

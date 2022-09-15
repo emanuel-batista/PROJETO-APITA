@@ -39,7 +39,6 @@
         </img> 
       </div>
     </div> 
-    </div>
   </div>
   <div class="container-2">
     

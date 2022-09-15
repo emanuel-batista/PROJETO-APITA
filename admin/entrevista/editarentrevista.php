@@ -10,7 +10,7 @@
     ?>
     <style>
         body{
-            background-color: #000A66;
+            background-color: whitesmoke;
         }
         .pai{
             width: 100vh;
@@ -39,8 +39,7 @@
 
         form{
             margin: 42px;
-            color: white;
-            box-shadow: 0px 0px 10px #000A66;
+            color: black;
         }
 
         .form-group{

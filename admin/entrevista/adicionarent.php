@@ -17,13 +17,14 @@
             flex-direction: column;
             justify-content: center;
             justify-items: column-reverse;
-            color: white;
+            color: black;
             align-items: center;
         }
 
         body{
-            background-color: #000A66;
+            background-color: whitesmoke;
         }
+
     </style>
 </head>
 <body>

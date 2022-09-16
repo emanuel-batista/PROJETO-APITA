@@ -2,7 +2,11 @@
 
     //se o usuário clicar no botão de curtir, adicionar +1 no campo curtidas, mas se for null, adicionar 1
     //se não tiver sessão ativa, não pode curtir
+
+
+
     include '../includes/config.php';
+
 
         if(isset($_SESSION['username'])){
             $id = $_GET['id'];
@@ -13,5 +17,3 @@
         }else{
             header("Location: ../public/login_public.php");
         }
-       /*   
-         */

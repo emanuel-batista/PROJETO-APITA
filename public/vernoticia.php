@@ -84,8 +84,8 @@
           echo '
           <div class="botoes-vn">
           <a href="vernoticiaclick.php?id='. $row['ID_NOTICIA'] .'" class="btn btn-warning">Ler mais</a> 
-          <a href="curtida.php?id='. $row['ID_NOTICIA'] .'"><img src="../static/images/like.svg" alt="ENTREVISTAS" id="cu"></a>
-          
+          <a href="curtida.php?id='. $row['ID_NOTICIA'] .'"><img src="../static/images/like.svg" alt="ENTREVISTAS" id="cu">'. $row['CURTIDA'] .'</a><br>
+
           </div>
           ';
           /* echo '<a href="curtida.php?id='. $row['ID_NOTICIA'] .'" class=><img src="../static/images/like.svg" alt="ENTREVISTAS" id="icon"></a>'; */

@@ -46,6 +46,9 @@
             <p class="text-capitalize">Bio: <strong><?php echo $bio ?></strong></p>
             <p class="text-capitalize">Esporte favorito: <strong><?php echo $esporte ?></strong></p>
             <a href='index.php' class='btn btn-primary'>Voltar</a>
+            <form action="../includes/logout.php" method="post">
+                <input type="submit" name="logout_btn" value="Sair" class="btn btn-waning">
+            </form>
         </div>
     </div>
 

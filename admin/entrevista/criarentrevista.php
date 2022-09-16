@@ -3,7 +3,7 @@
 require_once '../../includes/config.php';
 include_once '../verificaRanking.php';
 $titulo = addslashes(htmlentities($_POST['titulo'], ENT_QUOTES,'UTF-8'));
-$conteudo =  $conteudo = $_POST['conteudo'];
+$conteudo = $_POST['conteudo'];
     //colocar mysql_escape_string para apóstrofes e aspas simples
     function mysql_escape_mimic($inp) {
         if(is_array($inp))
@@ -15,6 +15,7 @@ $conteudo =  $conteudo = $_POST['conteudo'];
     
         return $inp;
     }
+$conteudo_esc = mysql_escape_mimic($conteudo);
 $link = addslashes($_POST['link']);
 //pegar imagem
     $target_dir = "../../static/images/imagens-noticia/";
@@ -25,6 +26,7 @@ $link = addslashes($_POST['link']);
  //pegou
 
 $idusuario = $_SESSION['id'];
+$nome = $_SESSION['nome'];
     
 
 
@@ -58,8 +60,8 @@ if(empty($titulo) || empty($conteudo) || empty($link)){
     }
 
     //inserir no banco de dados
-    $sql = "INSERT INTO entrevista (titulo_entrevista, conteudo_entrevista, link_entrevista, img_entrevista, id_usuario) VALUES ('$titulo', '$conteudo', '$link', '$imagembb', '$idusuario');";
-    var_dump($sql);
+    $sql = "INSERT INTO entrevista (titulo_entrevista, conteudo_entrevista, link_entrevista, img_entrevista, id_usuario, nome_usuario) VALUES ('$titulo', '$conteudo_esc', '$link', '$imagembb', '$idusuario', '$nome');";
+    echo $sql;
         
     $result = mysqli_query($conn, $sql);
     ?>
@@ -70,7 +72,7 @@ if(empty($titulo) || empty($conteudo) || empty($link)){
         echo "'<script>window.location.href = 'entrevista.php';</script>";
     }else{
         echo '<script>alert("Erro ao inserir entrevista!");</script>';
-        echo '<script>window.location.href = "entrevista.php";</script>';
+        
     }
 }
 

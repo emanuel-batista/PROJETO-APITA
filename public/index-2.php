@@ -18,20 +18,22 @@
         <?php require_once(ROOT_PATH . '/public_functions.php'); ?>
 
         <div class="n-1">
-            <h2>Últimas Notícias</h2>
+            <h2 class='h2-n1'>Últimas Notícias</h2>
             <div class="sub-n1">
                 <div class="sub-t">
-                    <h3 class="text-capitalize">lorem ipsum dolor sit amet</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor ipsum ut lectus lacinia, non auctor elit suscipit. Cras vehicula, purus vel suscipit dapibus, libero nibh dictum elit, non fermentum erat mi ut erat. Ut ullamcorper purus eu venenatis porttitor. Sed dolor dolor, suscipit non imperdiet non, volutpat ut orci.</p>
+                    <h3 class="h3-n1">lorem ipsum dolor sit amet</h3>
+                    <p class='p-n1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor ipsum ut lectus lacinia, non auctor elit suscipit. Cras vehicula, purus vel suscipit dapibus, libero nibh dictum elit, non fermentum erat mi ut erat. Ut ullamcorper purus eu venenatis porttitor. Sed dolor dolor, suscipit non imperdiet non, volutpat ut orci.</p>
                 </div>
-                <img src="../static/images/neymar.jpg" alt="AK-47 é o porte do homem">
+                <a href="#"><img src="../static/images/neymar.jpg" alt="AK-47 é o porte do homem" class='img-n1'></a>
             </div>
-            <div class="articles-n1">
-                <div class="article">
-                    <img src="../static/images/cardi-quiz4.jpg" alt="eba">
-                    <h4>Lorem Ipsum Dolor Sit Amet</h4>
+                <div class="articles-n1">
+                    <div class="article">
+                        <a href="">
+                        <img src="../static/images/cardi-quiz4.jpg" alt="eba" class='img-a'>
+                        <h4 class='h4-a'>Lorem Ipsum Dolor Sit Amet</h4>
+                        </a>
+                    </div>
                 </div>
-            </div>
         </div>
 
     </div>

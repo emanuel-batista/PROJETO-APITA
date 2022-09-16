@@ -1,6 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+.all{
+    max-height: 88vh !important;
+    margin-top: 12vh;
+}
+
 .n-1{
     height: 100%;
     margin-top: 6.5vh;
     margin-left: 12vw;
     margin-right: 12vw;
+}
+
+.h2-n1{
+    font-family: 'Roboto Condensed';
+    font-weight: 800;
+    line-height: 42px;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 20px !important;
+    color: #198754;
+    margin-bottom: 30px;
+}
+
+.sub-n1{
+    display: flex;
+    align-items: center;
+}
+
+.sub-t{
+    text-align: justify;
+    margin: 2rem;
+}
+
+.img-n1{
+    width: fit-content;
+    max-width: fit-content;
+    height: fit-content;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 40px;
+    margin: 2rem;
+}
+
+.articles-n1{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.article{
+    margin-top: 30px;
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.img-a{
+    width: 200px;
+    border-radius: 40px;
+}
+
+.h4-a{
+    font-size: 16px;
+}
+
+.h2-n1{
+    font-size: 40px;
+}
+
+.p-n1{
+    font-size: 20px;
+    font-family: 'Roboto Condensed';
+    font-weight: 400px;
+}
+
+.h3-n1{
+    font-family: 'Roboto Condensed';
+    font-weight: 800;
+    text-transform: uppercase !important;
+}
+
+a{
+    text-decoration: none !important;
+    color: black !important;
+    font-family: 'Roboto Condensed';
 }

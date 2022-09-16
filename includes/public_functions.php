@@ -242,3 +242,36 @@ function getPublishedPostsCategoria5(){
 	
 	return $noticias;
 }
+
+//pegar as 4 últimas notícias
+function getPublishedPosts4(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM noticia ORDER BY created_at desc limit 5;";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$noticias = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	/* //pegar 250 caracteres do conteúdo da notícia */
+	$noticias[0]['CONTEUDO_NOTICIA'] = substr($noticias[0]['CONTEUDO_NOTICIA'], 0, 250) . "...";
+	$noticias[1]['CONTEUDO_NOTICIA'] = substr($noticias[1]['CONTEUDO_NOTICIA'], 0, 250) . "...";
+	$noticias[2]['CONTEUDO_NOTICIA'] = substr($noticias[2]['CONTEUDO_NOTICIA'], 0, 250) . "...";
+	$noticias[3]['CONTEUDO_NOTICIA'] = substr($noticias[3]['CONTEUDO_NOTICIA'], 0, 250) . "...";
+	//pegar href com id da notícia
+	
+	return $noticias;
+}
+
+//pegar as 5 últimas entrevistas
+function getPublishedPosts5(){
+	// use global $conn object in function
+	global $conn;
+	$sql = "SELECT * FROM entrevista ORDER BY id_entrevista desc limit 5;";
+	$result = mysqli_query($conn, $sql);
+	// fetch all posts as an associative array called $posts
+	$entrevistas = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	//pegar href com id da notícia
+	
+	return $entrevistas;
+}

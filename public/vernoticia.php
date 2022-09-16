@@ -4,6 +4,16 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
     <?php include '../includes/config.php'; 
     ?> 
+    <style>
+      .aaaa {
+        display: flex;
+        flex-flow: wrap;
+      }
+
+      .aaaa hr {
+        width: 100%;
+      }
+    </style>
     <link rel="stylesheet" href="../static/style/style2.css">  
     <link rel="stylesheet" href="../static/style/style.css">  
     <meta charset="UTF-8">
@@ -52,6 +62,11 @@
       <?php 
         //while com echo das últimas 4 notícias
         $sql = "SELECT * FROM noticia ORDER BY id_noticia DESC LIMIT 4";
+
+        $i = 1;
+        $geraRow = true;
+        $contaElementos = 0;
+
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
           //se o título for maior que 50 caracteres, ele corta e coloca 3 pontos
@@ -66,11 +81,21 @@
           echo "<div class='hero-section'>";
           echo '<h1 class="h1-hero"><strong>'. $titulo .'</strong></h1>';
           echo '<p class="p-hero">'. $row['CATEGORIA_NOTICIA'] .'</p>';
-          echo '<a href="vernoticiaclick.php?id='. $row['ID_NOTICIA'] .'" class="btn btn-warning">Ler mais</a>';
+          echo '
+          <div class="botoes-vn">
+          <a href="vernoticiaclick.php?id='. $row['ID_NOTICIA'] .'" class="btn btn-warning">Ler mais</a> 
+          <a href="curtida.php?id='. $row['ID_NOTICIA'] .'"><img src="../static/images/like.svg" alt="ENTREVISTAS" id="cu"></a>
+          
+          </div>
+          ';
+          /* echo '<a href="curtida.php?id='. $row['ID_NOTICIA'] .'" class=><img src="../static/images/like.svg" alt="ENTREVISTAS" id="icon"></a>'; */
           echo '</div>';
           echo '</img>';
           echo '</div>';
-
+          if($i % 2 == 0 && $i > 0){
+            echo "<hr>";
+          }
+        $i++;
         }
       ?> 
     </div>

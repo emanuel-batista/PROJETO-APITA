@@ -15,28 +15,116 @@
     <div class="all">
         <?php require_once(ROOT_PATH . '/navbar.php'); ?>  
         <!-- incluir public_functions --> 
-        <?php require_once(ROOT_PATH . '/public_functions.php'); ?>
+        <?php require_once(ROOT_PATH . '/public_functions.php'); 
+            $posts = getPublishedPostsRecent(); 
+            $noticias = getPublishedPosts4();
+            $entrevistas = getPublishedPosts5();
+        
+        ?>
 
         <div class="n-1">
             <h2 class='h2-n1'>Últimas Notícias</h2>
             <div class="sub-n1">
                 <div class="sub-t">
-                    <h3 class="h3-n1">lorem ipsum dolor sit amet</h3>
-                    <p class='p-n1'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempor ipsum ut lectus lacinia, non auctor elit suscipit. Cras vehicula, purus vel suscipit dapibus, libero nibh dictum elit, non fermentum erat mi ut erat. Ut ullamcorper purus eu venenatis porttitor. Sed dolor dolor, suscipit non imperdiet non, volutpat ut orci.</p>
+                    <h3 class="h3-n1"><?php echo $posts[0]['TITULO_NOTICIA']; ?></h3>
+                    <p class='p-n1'><?php echo $posts[0]['CONTEUDO_NOTICIA']; ?></p>
                 </div>
-                <a href="#"><img src="../static/images/neymar.jpg" alt="AK-47 é o porte do homem" class='img-n1'></a>
+                <a href="vernoticiaclick.php?id=<?php echo $posts[0]['ID_NOTICIA']; ?>"><img src="../static/images/imagens-noticia/<?php echo $posts[0]['IMG_NOTICIA'] ?>" alt="AK-47 é o porte do homem" class='img-n1'></a>
             </div>
-                <div class="articles-n1">
-                    <div class="article">
-                        <a href="">
-                        <img src="../static/images/cardi-quiz4.jpg" alt="eba" class='img-a'>
-                        <h4 class='h4-a'>Lorem Ipsum Dolor Sit Amet</h4>
-                        </a>
-                    </div>
+            <hr>
+            <div class="articles-n1">
+                <div class="article">
+                    <a href="vernoticiaclick.php?id=<?php echo $noticias[0]['ID_NOTICIA']; ?>">
+                    <img src="../static/images/imagens-noticia/<?php echo $noticias[0]['IMG_NOTICIA'] ?>" alt="eba" class='img-a'>
+                    <h4 class='h4-a'><?php echo $noticias[0]['TITULO_NOTICIA'] ?></h4>
+                    </a>
                 </div>
+                <div class="article">
+                    <a href="vernoticiaclick.php?id=<?php echo $noticias[1]['ID_NOTICIA']; ?>">
+                    <img src="../static/images/imagens-noticia/<?php echo $noticias[1]['IMG_NOTICIA'] ?>" alt="eba" class='img-a'>
+                    <h4 class='h4-a'><?php echo $noticias[1]['TITULO_NOTICIA'] ?></h4>
+                    </a>
+                </div>
+                <div class="article">
+                    <a href="vernoticiaclick.php?id=<?php echo $noticias[2]['ID_NOTICIA']; ?>">
+                    <img src="../static/images/imagens-noticia/<?php echo $noticias[2]['IMG_NOTICIA'] ?>" alt="eba" class='img-a'>
+                    <h4 class='h4-a'><?php echo $noticias[2]['TITULO_NOTICIA'] ?></h4>
+                    </a>
+                </div>
+                <div class="article">
+                    <a href="vernoticiaclick.php?id=<?php echo $noticias[3]['ID_NOTICIA']; ?>">
+                    <img src="../static/images/imagens-noticia/<?php echo $noticias[3]['IMG_NOTICIA'] ?>" alt="eba" class='img-a'>
+                    <h4 class='h4-a'><?php echo $noticias[3]['TITULO_NOTICIA'] ?></h4>
+                    </a>
+                </div>
+                <div class="article">
+                    <a href="vernoticiaclick.php?id=<?php echo $noticias[4]['ID_NOTICIA']; ?>">
+                    <img src="../static/images/imagens-noticia/<?php echo $noticias[4]['IMG_NOTICIA'] ?>" alt="eba" class='img-a'>
+                    <h4 class='h4-a'><?php echo $noticias[4]['TITULO_NOTICIA'] ?></h4>
+                    </a>
+                </div>
+            </div>
+
+            <h2 class='h2-ent'>Últimas Entrevistas</h2>
+            <div class="articles-n1">
+                <div class="article">
+                    <a href="<?php echo $entrevistas[0]['LINK_ENTREVISTA'] ?>">
+                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[0]['IMG_ENTREVISTA'] ?>" alt="eba" class='img-a'>
+                    <h4 class='h4-a'><?php echo $entrevistas[0]['TITULO_ENTREVISTA'] ?></h4>
+                    </a>
+                </div>
+                <div class="article">
+                    <a href="<?php echo $entrevistas[1]['LINK_ENTREVISTA'] ?>">
+                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[1]['IMG_ENTREVISTA'] ?>" alt="eba" class='img-a'>
+                    <h4 class='h4-a'><?php echo $entrevistas[1]['TITULO_ENTREVISTA'] ?></h4>
+                    </a>
+                </div>
+                <div class="article">
+                    <a href="<?php echo $entrevistas[2]['LINK_ENTREVISTA'] ?>">
+                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[2]['IMG_ENTREVISTA'] ?>" alt="eba" class='img-a'>
+                    <h4 class='h4-a'><?php echo $entrevistas[2]['TITULO_ENTREVISTA'] ?></h4>
+                    </a>
+                </div>
+                <div class="article">
+                    <a href="<?php echo $entrevistas[3]['LINK_ENTREVISTA'] ?>">
+                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[3]['IMG_ENTREVISTA'] ?>" alt="eba" class='img-a'>
+                    <h4 class='h4-a'><?php echo $entrevistas[3]['TITULO_ENTREVISTA'] ?></h4>
+                    </a>
+                </div>
+                <div class="article">
+                    <a href="<?php echo $entrevistas[4]['LINK_ENTREVISTA'] ?>">
+                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[4]['IMG_ENTREVISTA'] ?>" alt="eba" class='img-a'>
+                    <h4 class='h4-a'><?php echo $entrevistas[4]['TITULO_ENTREVISTA'] ?></h4>
+                    </a>
+                </div>
+            </div>
+        <hr>
         </div>
 
+        <div class="container-3">
+    <img src="../static/images/Fotos.png" alt="Foto dos criadores" width="220px" height="220px">
+    <div class="conteudo-rodape">
+      <h3 style="color: #527E54;">Criado por: </h3>
+      <p style="font-size: 25px;">
+        Emanuel Batista(full stack)<br>
+        Letícia Xavier(front-end)<br>
+        Lívia Moraes(front-end)<br>
+        Paulo Martins(back-end e banco de dados)
+      </p>
     </div>
+    <img src="../static/images/Logo-2.png" alt="Logo do site" style="margin-top: -30px;" width="220px" height="220px">
+  </div>
+  <footer style="height: 10vh;height: 10vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #efefef;">
+    <h6>&copy; Todos os direitos reservados - AP!TA</h6>
+  </footer>
+    </div>
+
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

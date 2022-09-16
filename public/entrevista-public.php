@@ -38,7 +38,7 @@
                     <p style="color: #4E4E4E;"><?php echo $entrevistas[0]['CONTEUDO_ENTREVISTA']; ?></p>
                     <a href="<?php 
                         //pegar o href da entrevista
-                        $href = $entrevistas[0]['HREF'];
+                        $href = $entrevistas[0]['LINK_ENRTREVISTA'];
                         echo $href;
                     
                     ?>" class="btn btn-warning">Ver entrevista</a>
@@ -54,7 +54,7 @@
                     <p style="color: #4E4E4E; text-align: end;"><?php echo $entrevistas[1]['CONTEUDO_ENTREVISTA']; ?></p>
                     <a href='<?php 
                         //pegar o href da entrevista
-                        $href = $entrevistas[1]['HREF'];
+                        $href = $entrevistas[1]['LINK_ENTREVISTA'];
                         echo $href;
                     
                     ?>' class="btn btn-warning">Ver entrevista</a>
@@ -69,7 +69,7 @@
                     <p style="color: #4E4E4E;"><?php echo $entrevistas[1]['CONTEUDO_ENTREVISTA']; ?></p>
                     <a href="<?php 
                         //pegar o href da entrevista
-                        $href = $entrevistas[2]['HREF'];
+                        $href = $entrevistas[2]['LINK_ENTREVISTA'];
                         echo $href;
                     
                     ?>" class="btn btn-warning">Ver entrevista</a>

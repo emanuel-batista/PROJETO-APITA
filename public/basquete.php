@@ -79,7 +79,13 @@
           echo "<div class='hero-section'>";
           echo '<h1 class="h1-hero"><strong>' . $titulo .'</strong></h1>';
           echo '<p class="p-hero">'. $row['CATEGORIA_NOTICIA'] .'</p>';
-          echo '<a href="vernoticiaclick.php?id='. $row['ID_NOTICIA'] .'" class="btn btn-warning">Ler mais</a>';
+          echo '
+          <div class="botoes-vn">
+          <a href="vernoticiaclick.php?id='. $row['ID_NOTICIA'] .'" class="btn btn-warning">Ler mais</a> 
+          <a href="curtida.php?id='. $row['ID_NOTICIA'] .'" class="trem"><img src="../static/images/like.svg" alt="ENTREVISTAS" id="cu">'. $row['CURTIDA'] .'</a><br>
+
+          </div>
+          ';
           echo '</div>';
           echo '</img>';
           echo '</div>';

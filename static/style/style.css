@@ -431,3 +431,16 @@ footer{
   width: 22px;
   padding-left: 5px;
 }
+
+.trem{
+  color: #527e54;
+  text-decoration: none;
+  font-family: 'Roboto Condensed';
+  font-weight: 800;
+  display: flex;
+}
+
+.trem:hover{
+  color: #527e54;
+  text-decoration: none;
+}

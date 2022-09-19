@@ -31,6 +31,7 @@
     display: flex;
     align-items: center;
     WIDTH: 80vw;
+    justify-content: space-around;
 }
 
 .sub-t{
@@ -39,10 +40,10 @@
 }
 
 .img-n1{
-    width: fit-content;
-    max-width: fit-content;
-    height: fit-content;
-    max-height: 300px;
+    width: 600px;
+    max-width: 600px;
+    height: 400px;
+    max-height: 400px;
     object-fit: cover;
     border-radius: 40px;
     margin: 2rem;

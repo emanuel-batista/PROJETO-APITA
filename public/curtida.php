@@ -13,7 +13,7 @@
             $sql = "UPDATE noticia SET curtida = curtida + 1 WHERE ID_NOTICIA = $id";
             echo $sql;
             $result = mysqli_query($conn, $sql);
-            header("Location: vernoticiaclick.php?id=$id");
+            header('Location: ' . $_SERVER['HTTP_REFERER']);
         }else{
             header("Location: ../public/login_public.php");
         }

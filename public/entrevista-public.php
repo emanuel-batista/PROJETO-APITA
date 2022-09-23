@@ -38,7 +38,7 @@
                     <p style="color: #4E4E4E;"><?php echo $entrevistas[0]['CONTEUDO_ENTREVISTA']; ?></p>
                     <a href="<?php 
                         //pegar o href da entrevista
-                        $href = $entrevistas[0]['LINK_ENRTREVISTA'];
+                        $href = $entrevistas[0]['LINK_ENTREVISTA'];
                         echo $href;
                     
                     ?>" class="btn btn-warning">Ver entrevista</a>

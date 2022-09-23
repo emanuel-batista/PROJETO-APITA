@@ -48,11 +48,11 @@
     <?php 
         $id = $_GET['id'];
         //select do nome da noticia a partir do id
-        $sql = "select titulo_noticia from noticia where id_noticia = $id;";
+        $sql = "select titulo_noticia, chamada_noticia from noticia where id_noticia = $id;";
         $result = mysqli_query($conn, $sql);
         $row = mysqli_fetch_assoc($result);
         $nome = $row['titulo_noticia'];
-
+        $chamada = $row['chamada_noticia'];
         echo "<title>". $nome ."</title>";
     ?>
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -66,6 +66,7 @@
     <?php
         echo("<div class='container-awr'>");
         echo("<h1>$nome</h1>");
+        echo("<h6>$chamada</h6>");
         //pegar conteudo da noticia no banco de dados
         $sql = "select noticia.*, usuario.id_usuario, usuario.nome from noticia inner join usuario on noticia.id_usuario = usuario.id_usuario or noticia.nome_usuario = usuario.nome where id_noticia = $id;";
         $result = mysqli_query($conn, $sql);

@@ -112,17 +112,19 @@ button{
     padding: 20px;
 } */
 .form-login{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin: 10px;
-    align-items: stretch;
-    width: 50vh;
-    padding: 20px;
-    height: 50vh;
-    justify-content: space-evenly;
-    border-radius: 20px;
-    margin: 10px;
+  font-weight: lighter;
+  display: flex;
+  font-family: 'Roboto Condensed';
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 10px;
+  align-items: stretch;
+  width: 51vh;
+  padding: 57px;
+  height: 76vh;
+  justify-content: space-evenly;
+  border-radius: 20px;
+  margin: 10px;
 }
 .botoes-login{
   display: flex;
@@ -131,7 +133,7 @@ button{
 }
 
 label{
-  color: white;
+  color: black;
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 1.2rem;
@@ -143,7 +145,7 @@ label{
   border-right: none;
   border-bottom: ridge;
   background-color: transparent;
-  color: white;
+  color: black;
   font-size: large;
   font-weight: bolder;
   padding: 10px;
@@ -157,8 +159,7 @@ label{
   text-transform: uppercase !important;
   font-weight: bold !important;
 }
-
-
+ 
 .icon-com-foto{
   height: 50px;
   max-width: 50px;
@@ -167,7 +168,7 @@ label{
   border-radius: 100px;
 }
 .input-login::placeholder{
-  color: white;
+  color: black;
   font-size: large;
   font-weight: bolder;
   padding: 10px;

@@ -16,12 +16,21 @@
         <?php require_once(ROOT_PATH . '/login.php'); ?>
         </div>
         <div class="container container-login">
+            <?php if(isset($_SESSION['msg'])): ?>
+                <div class="alert alert-danger" role="alert">
+                    <?php echo $_SESSION['msg']; 
+                    //depois de mostrar, apagar global
+                    unset($_SESSION['msg']); 
+                    ?>
+                </div>
+            <?php endif; ?>
+
             <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class='form-login'>
                 <input type="text" name="username" placeholder="Nome de usuário" class='input-login' required>
                 <input type="password" name="password" placeholder="Senha" class='input-login' required>
                 <div class='botoes-login'>
                     <input type="submit" name="login_btn" class='btn btn-light' value='Entrar'>
-                    <a href="register_public.php" class='btn btn-warning'>Cadastre-se</a>
+                    <a href="register_public.php" class='btn btn-warning entrar-btn'>Cadastre-se</a>
                 </div>
             </form>
         </div>

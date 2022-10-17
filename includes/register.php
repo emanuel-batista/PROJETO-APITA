@@ -13,7 +13,11 @@
     $username = addslashes($_POST['username']);
     $password = addslashes($_POST['password']);
     $redes = addslashes($_POST['redesocial']);
+
     $bio = addslashes($_POST['bio']);
+    //a cada enter, trocar por <br>
+    $bio = str_replace("\r", "<br>", $bio);
+
     $esporte = addslashes($_POST['esporte']);
 
     if (empty($username) || empty($password)) {
@@ -48,8 +52,9 @@
         $sql = "INSERT INTO usuario (nome, username, senha, foto, rede_social, bio_usuario, esporte_usuario, created_at) VALUES ('$nome', '$username', '$password', '$imagembb', '$redes', '$bio', '$esporte', now());";
         $result = mysqli_query($conn, $sql);
         if($result){
-            echo '<script>alert("Usuário cadastrado com sucesso!");</script>';
-            echo '<script>window.location.href = "../public/login_public.php";</script>';
+            //criar váriavel global para mostrar mensagem de sucesso
+            $_SESSION['msg'] = "<div class='alert alert-success' role='alert'>Bem-vindo(a)(e)(i)!</div>";
+            echo "<script>window.location.href = '../public/login_public.php';</script>";
         }else{
             echo '<script>alert("Erro ao cadastrar usuário!");</script>';
         }

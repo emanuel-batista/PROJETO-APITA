@@ -119,12 +119,14 @@ button{
   flex-wrap: nowrap;
   margin: 10px;
   align-items: stretch;
-  width: 51vh;
+  width: 54vh;
   padding: 57px;
-  height: 76vh;
+  height: 65vh;
   justify-content: space-evenly;
   border-radius: 20px;
   margin: 10px;
+  background: white;
+  box-shadow: 10px 10px 125px -54px rgb(0 0 0 / 50%);
 }
 .botoes-login{
   display: flex;
@@ -446,4 +448,13 @@ footer{
 .trem:hover{
   color: #527e54;
   text-decoration: none;
+}
+
+.entrar-btn{
+  background-color: #527e54 !important;
+  color: white !important;
+}
+
+.entrar-btn:hover{
+  color: black !important;
 }

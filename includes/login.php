@@ -21,6 +21,7 @@
 			$_SESSION['nome'] = $row['NOME'];
 			$_SESSION['id'] = $row['ID_USUARIO'];
 			$_SESSION['rede_social'] = $row['REDE_SOCIAL'];
+			$_SESSION['capa'] = $row['CAPA'];
 			header("Location: ../public/index.php");
 		}else{
 			echo "Usuário ou senha incorretos!";

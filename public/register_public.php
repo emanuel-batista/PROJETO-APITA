@@ -20,7 +20,7 @@
                 <input type="text" name="username" placeholder="Nome de usuário" class='input-login' required>
                 <input type="text" name="redesocial" placeholder="Redes sociais" class='input-login' required>
                 <textarea type="text" name="bio" placeholder="Bio" class='input-login' rows='2' id='bio' required></textarea>
-                <label for="esporte">Escolha seu esporte favorito</label>
+                <label for="esporte">Escolha seu esporte favorito:</label>
                 <select name="esporte" class='input-login' required>
                     <option value="futebol">Futebol</option>
                     <option value="basquete">Basquete</option>
@@ -32,6 +32,42 @@
                     <option value="skate">Skate</option>
                     <option value="surf">Surf</option>
                     <option value="outro">Outro</option>
+                </select>
+
+                <label for="capa">Escolha uma bandeira(capa do perfil)</label>
+                <select name="capa" class='input-login' required>
+                    <option value="alemanha">Alemanha</option>
+                    <option value="arabiasaudita">Arábia Saudita</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="australia">Austrália</option>
+                    <option value="belgica">Bélgica</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="camaroes">Camarões</option>
+                    <option value="canada">Canadá</option>
+                    <option value="coreiadosul">Coréia do Sul</option>
+                    <option value="costarica">Costa Rica</option>
+                    <option value="croacia">Croácia</option>
+                    <option value="dinamarca">Dinamarca</option>
+                    <option value="equador">Equador</option>
+                    <option value="espanha">Espanha</option>
+                    <option value="eua">EUA</option>
+                    <option value="franca">França</option>
+                    <option value="gana">Gana</option>
+                    <option value="holanda">Holanda</option>
+                    <option value="inglaterra">Inglaterra</option>
+                    <option value="ira">Irã</option>
+                    <option value="japao">Japão</option>
+                    <option value="marrocos">Marrocos</option>
+                    <option value="mexico">México</option>
+                    <option value="paisesbaixos">Países Baixos</option>
+                    <option value="polonia">Polônia</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="qatar">Qatar</option>
+                    <option value="senegal">Senegal</option>
+                    <option value="servia">Sérvia</option>
+                    <option value="suica">Suíça</option>
+                    <option value="tunisia">Tunísia</option>
+                    <option value="uruguai">Uruguai</option>
                 </select>
 
                 <input type="password" name="password" placeholder="Senha" class='input-login' required>

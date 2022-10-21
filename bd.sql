@@ -27,7 +27,8 @@ create table noticia(
     nome_usuario varchar(250) not null,
     CHAMADA_NOTICIA varchar(500),
     update_at date,
-    CURTIDA int(5) default(1)
+    CURTIDA int(5) default(1),
+    CAPA varchar(30)
 );
 
 create table entrevista(

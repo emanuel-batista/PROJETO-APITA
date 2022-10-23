@@ -43,7 +43,7 @@
             }
         }
         else{
-        $sql = "UPDATE noticia SET titulo_noticia = '$titulo', conteudo_noticia = '$conteudo_esc', categoria_noticia = '$categoria', chamada_noticia = '$chamada', updated_at = now() WHERE id_noticia = $id";
+        $sql = "UPDATE noticia SET titulo_noticia = '$titulo', conteudo_noticia = '$conteudo_esc', categoria_noticia = '$categoria', chamada_noticia = '$chamada', update_at = now() WHERE id_noticia = $id";
         echo $sql;
         $result = mysqli_query($conn, $sql);
         if($result){
@@ -53,8 +53,10 @@
 
         }else{
             //criar váriavel global para mostrar mensagem de erro
-            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro ao atualizar notícia!</div>";
-            echo "<script>window.location.href = 'noticia.php';</script>";
+            /* $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro ao atualizar notícia!</div>";
+            echo "<script>window.location.href = 'noticia.php';</script>"; */
+            //echo do erro
+            echo mysqli_error($conn);
     }
 }
     ?>

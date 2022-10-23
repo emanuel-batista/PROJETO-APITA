@@ -275,3 +275,5 @@ function getPublishedPosts5(){
 	
 	return $entrevistas;
 }
+
+//caso não tenha notícia e/ou entrevistas, criar 6 notícias e 6 entrevistas aleatórias

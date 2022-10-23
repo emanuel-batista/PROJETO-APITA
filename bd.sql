@@ -6,12 +6,13 @@ create table usuario(
 	NOME varchar(60) not null,
     USERNAME varchar(15) unique,
     SENHA varchar(15) not null,
-    RANKING tinyint(1) not null default(2),
+    RANKING tinyint(1) not null default 2,
     FOTO varchar(100),
     created_at timestamp,
     REDE_SOCIAL varchar(200),
     BIO_USUARIO varchar(500),
-    ESPORTE_USUARIO varchar(50)
+    ESPORTE_USUARIO varchar(50),
+    CAPA varchar(50)
 );
 
 create table noticia(
@@ -27,8 +28,7 @@ create table noticia(
     nome_usuario varchar(250) not null,
     CHAMADA_NOTICIA varchar(500),
     update_at date,
-    CURTIDA int(5) default(1),
-    CAPA varchar(30)
+    CURTIDA int(5) default 1
 );
 
 create table entrevista(
@@ -52,3 +52,4 @@ create table comentario(
 	foreign key (id_noticia) references noticia(id_noticia)
 );
 
+INSERT INTO `usuario` (`ID_USUARIO`, `NOME`, `USERNAME`, `SENHA`, `RANKING`, `FOTO`, `created_at`, `REDE_SOCIAL`, `BIO_USUARIO`, `ESPORTE_USUARIO`, `CAPA`) VALUES (1, 'Apita', 'apita', 'apita123', '3', 'apita.svg', now(), 'www.instagram.com', 'Olá! Somos os desenvolvedores do Projeto Ap!ta. Esperamos que tenha curtido o nosso website.', 'volei', 'brasil');

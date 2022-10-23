@@ -77,7 +77,7 @@
           }
 
           echo '<div class="sub-container-noticia">';
-          echo "<img src='../static/images/imagens-noticia/". $row['IMG_NOTICIA'] . "' class='img-fluid' alt='...' class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>";
+          echo "<img src='../static/images/imagens-noticia/". $row['IMG_NOTICIA'] . "' class='img-fluid img-1' alt='...' class='img-hero' style='min-width: 500px; max-width: 700px; max-height: 300px; object-fit: cover; border-radius: 40px;'>";
           echo "<div class='hero-section'>";
           echo '<h1 class="h1-hero"><strong>'. $titulo .'</strong></h1>';
           echo '<p class="p-hero">'. $row['CATEGORIA_NOTICIA'] .'</p>';

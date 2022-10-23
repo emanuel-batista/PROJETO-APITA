@@ -102,7 +102,7 @@
         </div>
 
         <div class="container-3">
-    <img src="../static/images/Fotos.png" alt="Foto dos criadores" width="220px" height="220px">
+    <img src="../static/images/Fotos.png" alt="Foto dos criadores" width="220px" height="220px" class='foto-dos-criadores'>
     <div class="conteudo-rodape">
       <h3 style="color: #527E54;">Criado por: </h3>
       <p style="font-size: 25px;">

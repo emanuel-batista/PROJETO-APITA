@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Roboto+Condensed:wght@300;400;700&display=swap');
+
 .nav{ 
     position: fixed;
     width: 100%;
@@ -476,4 +478,54 @@ footer{
 
 .entrar-btn:hover{
   color: black !important;
+}
+
+@media only screen and (max-width: 1366px) {
+   /* Diminuir tamanho das imagens */
+  .img-a{
+    scale: 0.8;
+  }
+
+  .foto-dos-criadores{
+    scale: 0.8;
+  }
+
+  .form-login{
+    scale: 0.8;
+    height: 100vh;
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  /* Diminuir tamanho das imagens */
+  .img-a{
+    scale: 0.6;
+  }
+
+  .foto-dos-criadores{
+    scale: 0.6;
+  }
+  .form-login{
+    scale: 0.6;
+    height: 100vh;
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* Diminuir tamanho das imagens */
+  .img-a{
+    scale: 0.4;
+  }
+
+  .foto-dos-criadores{
+    scale: 0.4;
+  }
+
+  .form-login{
+    scale: 0.6;
+    height: 45rem;
+    width: 60vw;
+  }
 }

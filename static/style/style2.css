@@ -47,7 +47,7 @@
     flex-flow: row wrap;
     justify-content: center;
     flex-wrap: nowrap;
-    align-items: flex-start;
+    align-items: center;
     align-content: flex-end;
     object-fit: contain;
     /* padding: 90px; */
@@ -174,7 +174,7 @@ a:hover{
   flex-direction: column;
   height: 100vh;
   flex-wrap: wrap;
-  width: 100vw;
+  width: 45vw;
   align-content: center;
   justify-content: space-evenly;
 }

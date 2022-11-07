@@ -53,3 +53,4 @@ create table comentario(
 );
 
 INSERT INTO `usuario` (`ID_USUARIO`, `NOME`, `USERNAME`, `SENHA`, `RANKING`, `FOTO`, `created_at`, `REDE_SOCIAL`, `BIO_USUARIO`, `ESPORTE_USUARIO`, `CAPA`) VALUES (1, 'Apita', 'apita', 'apita123', '3', 'apita.svg', now(), 'www.instagram.com', 'Olá! Somos os desenvolvedores do Projeto Ap!ta. Esperamos que tenha curtido o nosso website.', 'volei', 'brasil');
+

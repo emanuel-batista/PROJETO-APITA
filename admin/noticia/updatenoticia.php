@@ -53,10 +53,8 @@
 
         }else{
             //criar váriavel global para mostrar mensagem de erro
-            /* $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro ao atualizar notícia!</div>";
-            echo "<script>window.location.href = 'noticia.php';</script>"; */
-            //echo do erro
-            echo mysqli_error($conn);
+            $_SESSION['msg'] = "<div class='alert alert-danger' role='alert'>Erro ao atualizar notícia!</div>";
+            echo "<script>window.location.href = 'noticia.php';</script>";
     }
 }
     ?>

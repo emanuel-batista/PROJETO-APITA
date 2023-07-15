@@ -29,37 +29,37 @@
                     <h3 class="h3-n1"><?php echo $posts[0]['TITULO_NOTICIA']; ?></h3>
                     <p class='p-n1'><?php echo $posts[0]['CONTEUDO_NOTICIA']; ?></p>
                 </div>
-                <a href="vernoticiaclick.php?id=<?php echo $posts[0]['ID_NOTICIA']; ?>"><img src="../static/images/imagens-noticia/<?php echo $posts[0]['IMG_NOTICIA'] ?>" alt="AK-47 é o porte do homem" class='img-n1'></a>
+                <a href="vernoticiaclick.php?id=<?php echo $posts[0]['ID_NOTICIA']; ?>"><img src="../static/images/imagens-noticia/<?php echo $posts[0]['IMG_NOTICIA'] ?>" alt="Notícia principal" class='img-n1'></a>
             </div>
             <hr>
             <div class="articles-n1">
                 <div class="article">
                     <a href="vernoticiaclick.php?id=<?php echo $noticias[0]['ID_NOTICIA']; ?>">
-                    <img src="../static/images/imagens-noticia/<?php echo $noticias[0]['IMG_NOTICIA'] ?>" alt="eba" class='img-a'>
+                    <img src="../static/images/imagens-noticia/<?php echo $noticias[0]['IMG_NOTICIA'] ?>" alt="Notícia 1" class='img-a'>
                     <h4 class='h4-a'><?php echo $noticias[0]['TITULO_NOTICIA'] ?></h4>
                     </a>
                 </div>
                 <div class="article">
                     <a href="vernoticiaclick.php?id=<?php echo $noticias[1]['ID_NOTICIA']; ?>">
-                    <img src="../static/images/imagens-noticia/<?php echo $noticias[1]['IMG_NOTICIA'] ?>" alt="eba" class='img-a'>
+                    <img src="../static/images/imagens-noticia/<?php echo $noticias[1]['IMG_NOTICIA'] ?>" alt="Notícia 2" class='img-a'>
                     <h4 class='h4-a'><?php echo $noticias[1]['TITULO_NOTICIA'] ?></h4>
                     </a>
                 </div>
                 <div class="article">
                     <a href="vernoticiaclick.php?id=<?php echo $noticias[2]['ID_NOTICIA']; ?>">
-                    <img src="../static/images/imagens-noticia/<?php echo $noticias[2]['IMG_NOTICIA'] ?>" alt="eba" class='img-a'>
+                    <img src="../static/images/imagens-noticia/<?php echo $noticias[2]['IMG_NOTICIA'] ?>" alt="Notícia 3" class='img-a'>
                     <h4 class='h4-a'><?php echo $noticias[2]['TITULO_NOTICIA'] ?></h4>
                     </a>
                 </div>
                 <div class="article">
                     <a href="vernoticiaclick.php?id=<?php echo $noticias[3]['ID_NOTICIA']; ?>">
-                    <img src="../static/images/imagens-noticia/<?php echo $noticias[3]['IMG_NOTICIA'] ?>" alt="eba" class='img-a'>
+                    <img src="../static/images/imagens-noticia/<?php echo $noticias[3]['IMG_NOTICIA'] ?>" alt="Notícia 4" class='img-a'>
                     <h4 class='h4-a'><?php echo $noticias[3]['TITULO_NOTICIA'] ?></h4>
                     </a>
                 </div>
                 <div class="article">
                     <a href="vernoticiaclick.php?id=<?php echo $noticias[4]['ID_NOTICIA']; ?>">
-                    <img src="../static/images/imagens-noticia/<?php echo $noticias[4]['IMG_NOTICIA'] ?>" alt="eba" class='img-a'>
+                    <img src="../static/images/imagens-noticia/<?php echo $noticias[4]['IMG_NOTICIA'] ?>" alt="Notícia 5" class='img-a'>
                     <h4 class='h4-a'><?php echo $noticias[4]['TITULO_NOTICIA'] ?></h4>
                     </a>
                 </div>
@@ -69,31 +69,31 @@
             <div class="articles-n1">
                 <div class="article">
                     <a href="<?php echo $entrevistas[0]['LINK_ENTREVISTA'] ?>">
-                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[0]['IMG_ENTREVISTA'] ?>" alt="eba" class='img-a'>
+                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[0]['IMG_ENTREVISTA'] ?>" alt="Entrevista 1" class='img-a'>
                     <h4 class='h4-a'><?php echo $entrevistas[0]['TITULO_ENTREVISTA'] ?></h4>
                     </a>
                 </div>
                 <div class="article">
                     <a href="<?php echo $entrevistas[1]['LINK_ENTREVISTA'] ?>">
-                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[1]['IMG_ENTREVISTA'] ?>" alt="eba" class='img-a'>
+                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[1]['IMG_ENTREVISTA'] ?>" alt="Entrevista 2" class='img-a'>
                     <h4 class='h4-a'><?php echo $entrevistas[1]['TITULO_ENTREVISTA'] ?></h4>
                     </a>
                 </div>
                 <div class="article">
                     <a href="<?php echo $entrevistas[2]['LINK_ENTREVISTA'] ?>">
-                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[2]['IMG_ENTREVISTA'] ?>" alt="eba" class='img-a'>
+                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[2]['IMG_ENTREVISTA'] ?>" alt="Entrevista 3" class='img-a'>
                     <h4 class='h4-a'><?php echo $entrevistas[2]['TITULO_ENTREVISTA'] ?></h4>
                     </a>
                 </div>
                 <div class="article">
                     <a href="<?php echo $entrevistas[3]['LINK_ENTREVISTA'] ?>">
-                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[3]['IMG_ENTREVISTA'] ?>" alt="eba" class='img-a'>
+                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[3]['IMG_ENTREVISTA'] ?>" alt="Entrevista 4" class='img-a'>
                     <h4 class='h4-a'><?php echo $entrevistas[3]['TITULO_ENTREVISTA'] ?></h4>
                     </a>
                 </div>
                 <div class="article">
                     <a href="<?php echo $entrevistas[4]['LINK_ENTREVISTA'] ?>">
-                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[4]['IMG_ENTREVISTA'] ?>" alt="eba" class='img-a'>
+                    <img src="../static/images/imagens-noticia/<?php echo $entrevistas[4]['IMG_ENTREVISTA'] ?>" alt="Entrevista 5" class='img-a'>
                     <h4 class='h4-a'><?php echo $entrevistas[4]['TITULO_ENTREVISTA'] ?></h4>
                     </a>
                 </div>
@@ -120,7 +120,7 @@
     align-items: center;
     justify-content: center;
     background: #efefef;">
-    <h6>&copy; Todos os direitos reservados - AP!TA</h6>
+    <h6>&copy; Todos os direitos reservados - AP!TA - ETEC Araraquara   </h6>
   </footer>
     </div>
 

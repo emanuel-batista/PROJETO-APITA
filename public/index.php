@@ -102,14 +102,13 @@
         </div>
 
         <div class="container-3">
-    <img src="../static/images/Fotos.png" alt="Foto dos criadores" width="220px" height="220px" class='foto-dos-criadores'>
-    <div class="conteudo-rodape">
-      <h3 style="color: #527E54;">Criado por: </h3>
-      <p style="font-size: 25px;">
-        Emanuel Batista(full stack)<br>
-        Letícia Xavier(front-end)<br>
-        Lívia Moraes(front-end)<br>
-        Paulo Martins(back-end e banco de dados)
+        <div class="conteudo-rodape">
+        <h3 style="color: #527E54;">Criado por: </h3>
+        <p style="font-size: 25px;">
+            Emanuel Batista(Full Stack)<br>
+            Mariana Barbosa(Front-End)<br>
+            Otávio Chile(Back-End)<br>
+            Paulo Martins(Back-End e Banco de Dados)
       </p>
     </div>
     <img src="../static/images/Logo-2.png" alt="Logo do site" style="margin-top: -30px;" width="220px" height="220px">

@@ -15,7 +15,7 @@
             object-fit: contain;
         }
         .container-awr{
-            width: 100vw;
+            width: 50vw;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -42,6 +42,13 @@
 
         .criado{
             color: #d9d9d9;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
         }
     </style>
     <?php include '../includes/config.php'; ?>

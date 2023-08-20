@@ -32,6 +32,7 @@
     align-items: center;
     WIDTH: 80vw;
     justify-content: space-around;
+    background-color: #c7c7c7;
 }
 
 .sub-t{
@@ -53,7 +54,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: stretch;
 }
 
